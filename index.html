@@ -4,16 +4,31 @@
     <title>Ethan Ky's Website</title>
     <style>
       body {
+        background: linear-gradient(-45deg, #ba52ee, #3c6de7, #23a6d5, #23d5ab);
+	      background-size: 400% 100%;
+	      animation: gradient 5s ease infinite;
+
         max-width: 500px;
         padding-top: 40px;
         padding-bottom: 40px;
-        background-color: rgb(62, 165, 255);
         margin: auto;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
 
       .Section {
@@ -31,7 +46,13 @@
       #profilePic {
         width: 128px;
         height: 128px;
-        border-radius: 100%;
+        border: solid black 4px;
+      }
+
+      #Socials {
+        display: flex;
+        align-items: center;
+        gap: 30px;
       }
 
       .link {
@@ -41,7 +62,7 @@
         padding: 5px 20px;
         justify-content: space-around;
         background-color: rgb(213, 213, 213);
-        border: solid black 5px;
+        border: solid black 4px;
         border-radius: 10px;
         margin: 5px;
         text-decoration: none;
@@ -57,21 +78,24 @@
       <ul>
         <li>Sophmore at University of Illinois at Chicago (UIC)</li>
         <li>Major in Computer Science (CS)</li>
-        <li>Still seeking an internship in current major/li>
+        <li>Still seeking an internship in current major</li>
       </ul>
     </div>
 
     <div class="Section">
       <h2>My Socials</h2>
-      <div class="link">
-        <img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" alt = "Github Logo"/>
-        <a href="https://github.com/eky2429" target="_blank">Github</a>
-      </div>
 
-      <div class="link">
-        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
-        alt = "Github Logo"/>
-        <a href="https://www.linkedin.com/in/ethan-ky2429/" target="_blank">LinkedIn</a>
+      <div id="Socials">
+        <div class="link">
+          <img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" alt = "Github Logo"/>
+          <a href="https://github.com/eky2429" target="_blank">Github</a>
+        </div>
+
+        <div class="link">
+          <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+          alt = "Github Logo"/>
+          <a href="https://www.linkedin.com/in/ethan-ky2429/" target="_blank">LinkedIn</a>
+        </div>
       </div>
     </div>
 
