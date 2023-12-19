@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Ethan Ky's Website</title>
@@ -12,7 +13,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 15px;
+      }
+
+      .Section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       img {
@@ -33,7 +40,7 @@
         gap: 50px;
         padding: 5px 20px;
         justify-content: space-around;
-        background-color: rgb(74, 228, 255);
+        background-color: rgb(213, 213, 213);
         border: solid black 5px;
         border-radius: 10px;
         margin: 5px;
@@ -43,18 +50,43 @@
   </head>
 
   <body>
-    <img id = "profilePic" src = "Profile.png" alt = "Image of me"/>
-    <h1>Ethan Ky</h1>
 
-    <div class="link">
-      <img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" alt = "Github Logo"/>
-      <a href="https://github.com/eky2429" target="_blank">Github</a>
+    <div class="Section">
+      <img id = "profilePic" src = "Profile.png" alt = "Image of me"/>
+      <h1>Ethan Ky</h1>
+      <ul>
+        <li>Sophmore at University of Illinois at Chicago (UIC)</li>
+        <li>Major in Computer Science (CS)</li>
+        <li>Still seeking an internship in current major/li>
+      </ul>
     </div>
 
-    <div class="link">
-      <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
-      alt = "Github Logo"/>
-      <a href="https://www.linkedin.com/in/ethan-ky2429/" target="_blank">LinkedIn</a>
+    <div class="Section">
+      <h2>My Socials</h2>
+      <div class="link">
+        <img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" alt = "Github Logo"/>
+        <a href="https://github.com/eky2429" target="_blank">Github</a>
+      </div>
+
+      <div class="link">
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+        alt = "Github Logo"/>
+        <a href="https://www.linkedin.com/in/ethan-ky2429/" target="_blank">LinkedIn</a>
+      </div>
     </div>
+
+    <div class="Section">
+      <h3>Accounts I follow on Instagram</h3>
+      <div class="link">
+        <a href="https://www.instagram.com/masteringwealth/?hl=en" target="_blank">Mastering Wealth</a>
+      </div>
+      <div class="link">
+        <a href="https://www.instagram.com/mindset.focused/" target="_blank">Mindset.Focused</a>
+      </div>
+      <div class="link">
+        <a href="https://www.instagram.com/keys4success___/?hl=en" target="_blank">Keys4Success</a>
+      </div>
+    </div>
+
   </body>
 </html>
