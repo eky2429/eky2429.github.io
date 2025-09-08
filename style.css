@@ -140,23 +140,18 @@ body {
 
 
 /*Navigation Bar*/
-
-nav {
-  background-color: #333;
-}
-
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex; /* Makes the list items align in a row */
-}
-
-nav li {
-  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav a {
+  background-color: #333;
+  border-radius: 10px;
   display: block;
   color: white;
   text-align: center;
