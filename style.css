@@ -34,16 +34,21 @@ body {
     align-items: center;
   }
 
-  img {
+  .logo {
     width: 50px;
     height: 50px;
     border-radius: 100%;
+  }
+
+  img {
+    width: 50%;
   }
 
   #profilePic {
     width: 128px;
     height: 128px;
     border: solid black 4px;
+    border-radius: 100%;
   }
 
   #Socials {
@@ -161,4 +166,50 @@ nav a {
 
 nav a:hover {
   background-color: #111;
+}
+
+/*TRoF Page*/
+
+/* Center project pages */
+body.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers block children horizontally */
+    text-align: center;  /* centers inline text inside elements */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* constrain content width so long lines stay readable */
+.Section {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* center navigation items */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    /* keep existing color/font rules if present */
+}
+
+/* make gallery images centered and responsive */
+.screenshot-gallery img {
+    display: block;
+    margin: 0.5rem auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* small spacing for captions */
+.screenshot-gallery p {
+    margin: 0.25rem 0 1rem 0;
 }
