@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pac Survivor - Game Project</title>
+  <link rel = "stylesheet" href = "style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .game-title {
+      color: #FFFF00;
+      background-color: #000000;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <!--Navigation-->
+  <nav>
+    <ul>
+      <li><a href = "index.html">Home</a></li>
+      <li><a href = "projects.html">Projects</a></li>
+    </ul>
+  </nav>
+  
+  <header>
+    <h1 class="game-title">Pac Survivor</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>About the Game</h2>
+      <p>Pac Survivor is an exciting game that combines classic Pac-Man elements with survival mechanics.</p>
+      <p>Context: This game was originally made as a class project (Pacman Battle Royale 99; see the projects page). But I decided to remake it <a href="https://genius.com/Meghan-trainor-all-about-that-bass-lyrics">"from the bottom to the top" - Megan Trainor</a>. The orignal version did not have the best coding practices, like lines of cod for UI used in pac man or vice versa. Also, we did not focus too much on sound design (and I am usually a stickler for it), so I revamped the audio experience to make it more immersive. This is what to expect from the final version!</p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+
+      <p>How to read text:<br/>
+      <u>Underline</u> = New feature not present in orignal version</p>
+
+      <ul>
+        <li>Added Pacman Movement and 1st level layout</li>
+        <li>Added <s>bone crack</s>, music, and sounds in game files</li>
+        <li>Added waka-waka sound pacman makes when eating pellets</li>
+        <li>Added Score text in UI</li>
+        <li>Added ghosts with eye movment</li>
+        <li>Added custom behavior for each ghost (Blinky = chasing pacman; Pinky = same as Blinky but also fast; Inky = ambusher; Clyde = randomizer...)</li>
+        <li>Added power pellet</li>
+        <li>Added different states for ghosts: run, def, eaten, scatter, </li>
+        <li>Added chase state for ghosts in pacman is within line of sight</li>
+        <li>Added main menu</li>
+        <li>Added sounds for ghosts</li>
+        <li>Added fruit and chase music</li>
+        <li>Added game over text overlay</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Screenshots</h2>
+      <div class="screenshot-gallery">
+        <img src="src/pac-survivor/MainMenu.png"/><br/>
+        <p>The Current main menu as of 11/6!</p>
+
+        <img src="src/pac-survivor/Start.png"/><br/>
+        <p>The Start screen for Pac Survivor!</p>
+
+        <img src="src/pac-survivor/GameOver.png"/><br/>
+        <p>What happens when you lose the game!</p>
+    </section>
+    
+
+    <section>
+      <h2>Development Status</h2>
+      <p>Right now, I am working on implementing the unique features that my group members added to the original version: unique ghost behaviors (going through walls, shooting bullets, orbiting fireball, etc.), a way to save your score(s), powerups (speed, sprint, shooting stun bullets, magnet, pushback, etc.), a shop scene for upgrading pacman.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Pac Survivor. All rights reserved.</p>
+  </footer>
+</body>
+</html>
