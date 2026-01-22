@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pac Survivor - Game Project</title>
   <link rel = "stylesheet" href = "../assets/css/style.css">
+  <link rel = "stylesheet" href = "../assets/css/components.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -36,12 +37,7 @@
 <body>
   
   <!--Navigation-->
-  <nav>
-    <ul>
-      <li><a href = "../index.html">Home</a></li>
-      <li><a href = "../projects.html">Projects</a></li>
-    </ul>
-  </nav>
+  <div id="nav-placeholder"></div>
   
   <header>
     <h1 class="game-title">Savings Application</h1>
@@ -51,6 +47,9 @@
     <section>
       <h2>About the Program</h2>
       <p>As someone who wants an easy way to separate his pay into different bins (needs, wants, and savings), I needed a fast and efficient way to calculate the totals, so I thought why not create a program for that myself? Which is what I did?</p>
+
+      <h2>UPDATE!</h2>
+      <p>I decided to remake this program so it runs graphically instead of being console-based! I am using PyCharm as my development environment and using PyQt6 for the graphical interface.</p>
     </section>
 
     <section>
@@ -80,12 +79,13 @@
 
     <section>
       <h2>Development Status</h2>
-      <p>In the future, I would not only want the user to be able to add custom categories for their expenses, but also have the application load graphically instead of it being console-based.</p>
+      <p>Currently working on making the application run graphically using PyQt6.</p>
     </section>
   </main>
 
-  <footer>
-    <p>© 2024 Savings Application. All rights reserved.</p>
-  </footer>
+    <!--Footer-->
+    <div id="footer-placeholder"></div>
+
+    <script src = "/assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 4: PPL Interpreter C++ | Ethan Ky</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/projects.css">
+
+  <!-- Optional: project-specific styles -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+  <!-- NAV (loaded via JS) -->
+  <div id="nav-placeholder"></div>
+
+  <main class="project-page">
+
+    <!-- 1. HERO / HEADER -->
+    <section class="project-hero">
+      <h1>Project 4: PPL Interpreter C++</h1>
+      <p class="project-tagline">
+        A simple interpreter for a custom programming language (PPL) implemented in C++.
+      </p>
+
+      <ul class="tech-stack">
+        <li>CLion</li>
+        <li>C++</li>
+      </ul>
+
+      <div class="project-links">
+        <a href="#" target="_blank">Live Demo</a>
+        <!--<a href="#" target="_blank">GitHub Repo</a>-->
+      </div>
+    </section>
+
+    <!-- 2. OVERVIEW -->
+    <section>
+      <h2>Overview</h2>
+      <p>
+        This was the 4th and FINAL project in Object Oriented Languages and Environment (CS 474). The goal was to build an interpreter for a made up programming language called PPL (Plain Programming Language) using C++. The program would behave similarly to a previous project where I built a PPL interpreter in Ruby, but this time I had to implement it in C++. <a href="#">(See this link)</a>
+      </p>
+    </section>
+
+    <!-- 3. FEATURES -->
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Conforms to the PPL language specification</li>
+        <li>Handles variable / list declarations and assignments</li>
+        <li>Supports basic arithmetic & head and tail operations</li>
+        <li>Supports other list commands like MERGE and COPY commands</li>
+        <li>Allows line-jumping based on condition(s)</li>
+      </ul>
+    </section>
+
+    <!-- 4. MEDIA -->
+    <section>
+      <h2>Screenshots</h2>
+      <div class="media-grid">
+        <img src="images/screenshot1.png" alt="Screenshot 1">
+        <img src="images/screenshot2.png" alt="Screenshot 2">
+      </div>
+    </section>
+
+    <!-- 5. TECHNICAL DETAILS -->
+    <section>
+      <h2>Technical Details</h2>
+      <ul>
+        <li>Implemented essential classes for an interpreter: Token, Lexer, Parser, and main script</li>
+        <li>Separated Parser logic from main script and command(s) logic</li>
+        <li>Implemented a Command Design System so each command class has a constrctor and execute()</li>
+      </ul>
+    </section>
+
+    <!-- 6. CHALLENGES -->
+    <section>
+      <h2>Challenges & Solutions</h2>
+      <p>
+        One challenge I faced was figuring out how to use pointers to store data, when I asked ChatGPT what to do about it (which was allowed in the class and something O suually avoid), it suggested using vectors to store data instead of raw pointers, which simplified memory management and reduced the risk of memory leaks. This approach allowed me to focus more on the interpreter logic rather than low-level memory handling.
+      </p>
+    </section>
+
+    <!-- 7. LESSONS -->
+    <section>
+      <h2>What I Learned</h2>
+      <ul>
+        <li>Utilizing AI for debugging and problem-solving</li>
+        <li>Benefits of using vectors instead of raw pointers</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- COMPONENT LOADER -->
+   <script src = "/assets/js/main.js"></script>
+
+</body>
+</html>
