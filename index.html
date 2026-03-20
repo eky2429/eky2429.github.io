@@ -1,45 +1,62 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body {
-      padding-top: 40px;
-      padding-bottom: 40px;
-      background-color: #232946;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+<html lang = "en">
+  <head charset="UTF-8">
+    <title>Ethan Ky's Website</title>
+    <link rel = "stylesheet" href = "/assets/css/style.css">
+    <link rel = "stylesheet" href = "/assets/css/components.css">
+  </head>
 
-    .items {
-      text-align: center;
-    }
+  <body class = "index">
 
-    .banner-image {
-      width: 128px;
-      height: 128px;
-      object-fit: cover;
-      border-radius: 128px;
-    }
-  </style>
-  <title>Suraj Ramrakhyani</title>
-</head>
-<body>
-  <div class="items">
-    <h1>Suraj Ramrakhyani</h1>
+    <!--Navigation-->
+    <div id="nav-placeholder"></div>
 
-    <div class="banner">
-      <img src="/thumbnails/mountain.jpg" alt="Suraj Mountain" class="banner-image">
+    <!--Other Basic information about me-->
+    <div class="Section">
+      <img id = "profilePic" src = "/assets/images/Profile.png" alt = "Image of me"/>
+      <h1>Ethan Ky</h1>
+      <ul>
+        <li>Senior at University of Illinois at Chicago (UIC)</li>
+        <li>Major in Computer Science (CS) with concentration in Software Engineering</li>
+        <li>Seeking an internship in Software Engineering or related industry</li>
+      </ul>
     </div>
 
-    <p>Check out these cool websites:</p>
+    <!--Socials-->
+    <div class="Section">
+      <h2>My Socials</h2>
 
-    <ul>
-      <li><a href="https://www.example.com">Example Website</a></li>
-      <li><a href="https://www.google.com">Google</a></li>
-      <li><a href="https://www.github.com">GitHub</a></li>
-    </ul>
-  </div>
-</body>
+      <div id="Socials">
+        <div class="link">
+          <img class = "logo" src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" alt = "Github Logo"/>
+          <a href="https://github.com/eky2429" target="_blank">Github</a>
+        </div>
+
+        <div class="link">
+          <img class = "logo" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+          alt = "Github Logo"/>
+          <a href="https://www.linkedin.com/in/ethan-ky2429/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Instagrams I follow-->
+    <div class="Section">
+      <h3>Accounts I follow on Instagram</h3>
+      <div class="link">
+        <a href="https://www.instagram.com/masteringwealth/?hl=en" target="_blank">Mastering Wealth</a>
+      </div>
+      <div class="link">
+        <a href="https://www.instagram.com/mindset.focused/" target="_blank">Mindset.Focused</a>
+      </div>
+      <div class="link">
+        <a href="https://www.instagram.com/keys4success___/?hl=en" target="_blank">Keys4Success</a>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div id="footer-placeholder"></div>
+
+    <script src = "/assets/js/main.js"></script>
+  </body>
 </html>

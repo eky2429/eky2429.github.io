@@ -17,9 +17,9 @@
   "workbench.tree.renderIndentGuides": "always",
   "files.autoSaveDelay": 500,
   "files.exclude": {
-		"**/.git": true,
-		".vscode": true,
-		".bundle": true,
+    "**/.git": true,
+    ".vscode": true,
+    ".bundle": true,
     ".gitignore": true,
     ".gitpod.yml": true,
     ".rspec": true,
@@ -49,6 +49,7 @@
   "html.format.preserveNewLines": true,
   "html.format.templating": true,
   "terminal.integrated.altClickMovesCursor": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
   "vscode-erb-beautify.keepBlankLines": 1,
   "ruby.intellisense": false,
   "gitpod.openInStable.neverPrompt": true,
@@ -57,5 +58,16 @@
   "redhat.telemetry.enabled": false,
   "emmet.includeLanguages": {
     "erb": "html"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "mbessey.vscode-rufo",
+    "editor.formatOnSave": false
+  },
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+    "editor.formatOnSave": false
+  },
+  "files.associations": {
+    "*.html.erb": "erb"
   }
 }

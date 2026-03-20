@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+    color: #d5e6dc;  /* A fresh green color representing money/savings */
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* PROJECT PAGE */
+.project-page section {
+  margin-bottom: 2rem;
+}
+
+/* HERO */
+.project-hero {
+  margin-bottom: 2.5rem;
+}
+
+.project-tagline {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* TECH STACK */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.25rem;
+}
+
+.tech-stack li {
+  background: #e5e7eb;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* LINKS */
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  border: 1px solid #2563eb;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* MEDIA */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.media-grid img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}

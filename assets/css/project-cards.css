@@ -1,0 +1,71 @@
+/*projects.html*/
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  border-left: 5px solid #0077cc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #0077cc;
+}
+
+.course-card ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.course-card li {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .projects-container {
+    grid-template-columns: fr;
+  }
+}
+
+.finished {
+  color: #2e7d32; /* green */
+  font-weight: 500;
+}
+
+.in-progress {
+  color: #ef6c00; /* orange */
+  font-style: italic;
+}
+
+.planned {
+  color: #9e9e9e; /* gray */
+  text-decoration: underline dotted;
+}
+
+.cancelled {
+  color: #c62828; /* dark red */
+  font-style: italic;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.left-text {
+  text-align: left;
+}
