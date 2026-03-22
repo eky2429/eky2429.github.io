@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title | Ethan Ky</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/projects.css">
+
+  <!-- Optional: project-specific styles -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+  <!-- NAV (loaded via JS) -->
+  <div id="nav-placeholder"></div>
+
+  <main class="project-page">
+
+    <!-- 1. HERO / HEADER -->
+    <section class="project-hero">
+      <h1>Wumpus Program</h1>
+      <p class="project-tagline">
+        A classic C-based survival game developed as my introductory project for CS 211 at UIC. Navigate a treacherous 20-room cave, avoid hidden hazards, and hunt the elusive Wumpus using limited resources and logic.
+      </p>
+
+      <ul class="tech-stack">
+        <li>Repl.it</li>
+        <li>C Language</li>
+        <li>Memory Management</li>
+      </ul>
+
+      <div class="project-links">
+        <a href="#" target="_blank">Live Demo</a>
+        <a href="#" target="_blank">GitHub Repo</a>
+      </div>
+    </section>
+
+    <!-- 2. OVERVIEW -->
+    <section>
+      <h2>Overview</h2>
+      <p>
+        The Wumpus Program served as my gateway into low-level programming during my first semester at UIC. The project was developed in two distinct phases: the initial build established the core movement and hazard logic (pits and the Wumpus), while the second phase introduced complex mechanics like "super-bats" and a guided arrow system.
+      </p>
+      <p>
+        While the course was originally hosted on Repl.it, the project challenged me to think deeply about how data lives in memory. Beyond the logic of the game, I spent significant time balancing the "fun factor"—ensuring the cave layout was navigable while keeping the threat of the Wumpus unpredictable and engaging.
+      </p>
+
+      <p>The game is controlled via a CLI (Command Line Interface) with the following primary inputs:</p>
+      <ul>
+        <li><strong>Move:</strong> <code>M [ROOM_NUM]</code> (e.g., <code>M 3</code>)</li>
+        <li><strong>Shoot:</strong> <code>S [NUM_ROOMS] [ROOM_1] [ROOM_2] [ROOM_3]</code></li>
+        <li><strong>Map/Directions:</strong> <code>P</code> or <code>D</code></li>
+        <li><strong>Cheat Mode:</strong> <code>C</code> (Displays all hazard locations)</li>
+        <li><strong>Guess Wumpus:</strong> <code>G</code> (Final attempt to win)</li>
+      </ul>
+    </section>
+
+    <!-- 3. FEATURES -->
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Procedural World Generation:</strong> Randomizes positions for the player, Wumpus, pits, bats, and the arrow at the start of every game.</li>
+        <li><strong>Dynamic Hazard System:</strong> Includes "Super-bats" that transport players to random rooms and bottomless pits that result in an immediate game over.</li>
+        <li><strong>Sensory Feedback:</strong> Provides environmental clues (stench, drafts, rustling) based on the proximity of hazards to the player's current room.</li>
+        <li><strong>Guided Arrow Mechanics:</strong> A complex shooting system allowing arrows to travel through up to three rooms with custom ricochet logic.</li>
+      </ul>
+    </section>
+
+    <!-- 4. MEDIA -->
+    <section>
+      <h2>Screenshots</h2>
+      <div class="media-grid">
+        <img src="images/screenshot1.png" alt="Screenshot 1">
+        <img src="images/screenshot2.png" alt="Screenshot 2">
+      </div>
+    </section>
+
+    <!-- 5. TECHNICAL DETAILS -->
+    <section>
+      <h2>Technical Details</h2>
+      <ul>
+        <li><strong>Memory Management:</strong> Utilized <code>malloc</code> and <code>sizeof</code> for dynamic array allocation to handle room sequencing and unique position generation.</li>
+        <li><strong>Graph Representation:</strong> Implemented the 20-room cave system using a 2D adjacency array to define valid movement paths between nodes.</li>
+        <li><strong>Struct-Driven State:</strong> Managed game data (positions, move counts, and item status) using a custom <code>GameInfo</code> typedef for cleaner data passing.</li>
+        <li><strong>Input Validation:</strong> Developed a robust command parser using <code>switch</code> statements and <code>toupper()</code> to handle case-insensitive user inputs.</li>
+      </ul>
+    </section>
+
+    <!-- 6. CHALLENGES -->
+    <section>
+      <h2>Challenges & Solutions</h2>
+      <p>
+        <strong>The Problem:</strong> The primary hurdle was designing a non-linear map navigation system using 20 interconnected "rooms." Initially, I struggled with manual memory allocation using <code>malloc</code>, which led to frequent segmentation faults and unstable builds when trying to store neighbor room data.
+      </p>
+      <p>
+        <strong>The Solution:</strong> I pivoted from a purely dynamic heap-allocated approach to a structured 2D adjacency array. This allowed for O(1) lookups of adjacent rooms while ensuring the program’s memory footprint remained stable. By wrapping the player and hazard states into a single <code>GameInfo</code> struct, I was able to pass the entire game "world" through functions by reference, significantly reducing code complexity and debugging time.
+      </p>
+    </section>
+
+    <!-- 7. LESSONS -->
+    <section>
+      <h2>What I Learned</h2>
+      <ul>
+        <li>
+          <strong>Memory Management:</strong> Navigated the differences between Heap and Stack allocation. I originally used <code>malloc</code> to handle room arrays, learning how to manually manage memory and avoid segmentation faults.
+        </li>
+        <li>
+          <strong>Static vs. Dynamic Allocation:</strong> Gained the intuition to recognize when a static array is more efficient than dynamic allocation—specifically for fixed-size data structures like the 20-room cave map.
+        </li>
+        <li>
+          <strong>Pointer Arithmetic:</strong> Mastered the use of pointers to traverse 2D arrays and update game state by reference within the <code>GameInfo</code> struct.
+        </li>
+        <li>
+          <strong>Edge Case Handling:</strong> Developed logic to handle "ricochets" and unique random spawns, ensuring the Wumpus, hazards, and player never overlap at the start of a game.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 8. FUTURE WORK -->
+    <section>
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Implement a BFS (Breadth-First Search) algorithm to ensure the player never spawns in an inescapable position.</li>
+        <li>Transition from a 2D adjacency array to a linked-list-based Graph data structure for more complex cave shapes.</li>
+        <li>Add a persistent high-score system using file I/O to track the fewest moves taken to slay the Wumpus.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- COMPONENT LOADER -->
+   <script src = "/assets/js/main.js"></script>
+
+</body>
+</html>

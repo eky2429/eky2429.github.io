@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title | Ethan Ky</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/projects.css">
+
+  <!-- Optional: project-specific styles -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+  <!-- NAV (loaded via JS) -->
+  <div id="nav-placeholder"></div>
+
+  <main class="project-page">
+
+    <!-- 1. HERO / HEADER -->
+    <section class="project-hero">
+      <h1>Best Wordle Word</h1>
+      <p class="project-tagline">
+        A high-performance C utility that analyzes dictionary datasets to determine the mathematically optimal starting and follow-up words for Wordle.
+      </p>
+
+      <ul class="tech-stack">
+        <li>Repl.it</li>
+        <li>C Language</li>
+      </ul>
+
+      <div class="project-links">
+        <a href="#" target="_blank">Live Demo</a>
+        <a href="#" target="_blank">GitHub Repo</a>
+      </div>
+    </section>
+
+    <!-- 2. OVERVIEW -->
+    <section>
+      <h2>Overview</h2>
+      <p>
+        Building on my experience with procedural logic, I developed this program to solve a data-driven problem: "What is the best possible first move in Wordle?" The program parses two distinct datasets—official answers and allowed guesses—to calculate scores based on letter frequency and positional accuracy.
+      </p>
+      <p>
+        The core of the project is a comparison engine that simulates thousands of "guesses" against the answer key, ranking words based on how much information they reveal to the player.
+      </p>
+    </section>
+
+    <!-- 3. FEATURES -->
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Dual-File Parsing:</strong> Separates "Answer" lists from "Guess" lists to mirror the actual Wordle game constraints.</li>
+        <li><strong>Heuristic Scoring Engine:</strong> Assigns weighted values (3 points for "Green" matches, 1 point for "Yellow" matches) to rank word effectiveness.</li>
+        <li><strong>Multi-Step Strategy:</strong> Beyond the first word, the program can calculate the best *second* word by excluding letters already "used" by the top-tier starting word.</li>
+        <li><strong>Dynamic Menu System:</strong> Allows users to swap datasets on the fly and toggle between single-word or two-word strategy analysis.</li>
+      </ul>
+    </section>
+
+    <!-- 4. MEDIA -->
+    <section>
+      <h2>Screenshots</h2>
+      <div class="media-grid">
+        <img src="images/screenshot1.png" alt="Screenshot 1">
+        <img src="images/screenshot2.png" alt="Screenshot 2">
+      </div>
+    </section>
+
+    <!-- 5. TECHNICAL DETAILS -->
+    <section>
+      <h2>Technical Details</h2>
+      <ul>
+        <li><strong>Heuristic Scoring:</strong> Developed a custom scoring algorithm that simulates game logic by weighting Green (3pts) and Yellow (1pt) matches to find statistically superior starting words.</li>
+        <li><strong>Nested Loop Processing:</strong> Implemented a strategy-ranking system that re-evaluates the entire word library (O(N²) complexity) to find the best second-word follow-up.</li>
+        <li><strong>Memory Safety:</strong> Rigorously managed heap memory using <code>malloc</code> and <code>free</code> within nested structs, ensuring zero memory leaks during long-running data processing.</li>
+        <li><strong>Advanced Sorting:</strong> Implemented <code>qsort</code> with a custom comparator function to handle primary sorting (by score) and secondary sorting (alphabetical) simultaneously.</li>
+        <li><strong>Memory Management:</strong> Utilized a <code>wordCountStruct</code> with dynamically allocated strings to store and rank thousands of potential words without memory leaks.</li>
+        <li><strong>Positional Logic:</strong> Developed a two-pass algorithm to correctly identify "Green" matches before calculating "Yellow" matches, preventing the over-counting of duplicate letters.</li>
+      </ul>
+    </section>
+
+    <!-- 6. CHALLENGES -->
+    <section>
+      <h2>Challenges & Solutions</h2>
+      <p>
+        <strong>The Problem:</strong> The "Best Second Word" calculation required comparing every potential guess against every possible answer for every top-tier first word. This created a significant computational load when processing larger dictionary files.
+      </p>
+      <p>
+        <strong>The Solution:</strong> Instead of focusing on raw execution speed, I prioritized <strong>logic accuracy and memory stability</strong>. I developed a "cancellation" system using character masking to ensure the second-word suggestions were mathematically distinct from the first. While the process took several minutes for large datasets, the result was a highly accurate strategy that consistently identified the most efficient path to a win.
+      </p>
+      <p>
+        <strong>The Problem:</strong> Scoring the "Best Second Word" required a massive amount of computation, as the program had to re-evaluate the entire dictionary against every top-scoring first word.
+      </p>
+      <p>
+        <strong>The Solution:</strong> I implemented a "letter cancellation" system using underscores (<code>_</code>) to temporarily mask letters in the answer key. By passing the top word into the scoring function first, I was able to "filter" the answers, allowing the program to accurately find follow-up words that provide the most *new* information.
+      </p>
+    </section>
+
+    <!-- 7. LESSONS -->
+    <section>
+      <h2>What I Learned</h2>
+      <ul>
+        <li><strong>Struct Pointers:</strong> Deepened my understanding of <code>typedef</code> and pointer-to-struct arrays for managing complex datasets.</li>
+        <li><strong>Algorithm Efficiency:</strong> Learned the importance of minimizing file I/O by reading data into memory once and processing it locally.</li>
+        <li><strong>Complexity Management:</strong> Managed the logic of nested loops and conditional scores to ensure the "Best Second Word" didn't produce redundant suggestions.</li>
+      </ul>
+    </section>
+
+    <!-- 8. FUTURE WORK -->
+    <section>
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Implement a Bitmasking approach to represent words, which would significantly speed up the comparison logic.</li>
+        <li>Integrate a "Hard Mode" toggle that forces the second-word calculation to follow Wordle's hard mode rules.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- COMPONENT LOADER -->
+   <script src = "/assets/js/main.js"></script>
+
+</body>
+</html>
