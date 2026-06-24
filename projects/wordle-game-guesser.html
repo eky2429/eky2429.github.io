@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title | Ethan Ky</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/projects.css">
+
+  <!-- Optional: project-specific styles -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+  <!-- NAV (loaded via JS) -->
+  <div id="nav-placeholder"></div>
+
+  <main class="project-page">
+
+    <!-- 1. HERO / HEADER -->
+    <section class="project-hero">
+      <h1>Wordle Game Guesser</h1>
+      <p class="project-tagline">
+        An automated C-based solver that utilizes recursive elimination and constraint logic to "crack" any 5-letter secret word in a simulated Wordle environment.
+      </p>
+
+      <ul class="tech-stack">
+        <li>Repl.it</li>
+        <li>C Language</li>
+        <li>Algorithmic Filtering</li>
+        <li>Standard Library (stdlib.h)</li>
+      </li>
+
+      <div class="project-links">
+        <a href="#" target="_blank">Live Demo</a>
+        <a href="#" target="_blank">GitHub Repo</a>
+      </div>
+    </section>
+
+    <!-- 2. OVERVIEW -->
+    <section>
+      <h2>Overview</h2>
+      <p>
+        The Wordle Game Guesser is an intelligent agent designed to play Wordle autonomously. Unlike a human player who relies on vocabulary intuition, this program uses a process of elimination. By analyzing the "feedback" from each guess (Greens, Yellows, and Grays), it systematically prunes a dictionary of over 12,000 words until only the secret word remains.
+      </p>
+      <p>
+        The project simulates a full game loop, allowing users to either provide a specific secret word or let the computer pick one at random, then watching the "thinking" process as it narrows down the possibilities in real-time.
+      </p>
+    </section>
+
+    <!-- 3. FEATURES -->
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Automated Feedback Loop:</strong> Implements a visual "asterisk and capitalization" system to represent near-misses and exact matches, mimicking the original game's UI.</li>
+        <li><strong>Dynamic Word Pruning:</strong> A powerful <code>cancelWords</code> engine that filters the dictionary based on four distinct scoring states (Exact Match, Positional Misplace, Non-existence, and Duplicate Handling).</li>
+        <li><strong>Randomized Testing:</strong> Integrated <code>srand</code> and <code>time</code> hooks to allow for randomized secret word selection across multiple game rounds.</li>
+        <li><strong>Alphabetical Tie-Breaking:</strong> Uses a dual-stage comparison function to ensure consistent behavior when multiple words share the same validity score.</li>
+      </ul>
+    </section>
+
+    <!-- 4. MEDIA -->
+    <section>
+      <h2>Screenshots</h2>
+      <div class="media-grid">
+        <img src="images/screenshot1.png" alt="Screenshot 1">
+        <img src="images/screenshot2.png" alt="Screenshot 2">
+      </div>
+    </section>
+
+    <!-- 5. TECHNICAL DETAILS -->
+    <section>
+      <h2>Technical Details</h2>
+      <ul>
+        <li><strong>Constraint Logic:</strong> Developed a multi-pass filtering system. It handles the "Double Letter" edge case—ensuring that if a guess has two 'E's but the secret word only has one, only one 'E' is marked as a match.</li>
+        <li><strong>State Management via Scores:</strong> Instead of deleting data, the program uses a "Score of -1" as a flag to ignore invalid words, which is then handled efficiently by <code>qsort</code>.</li>
+        <li><strong>Memory Safety:</strong> Utilized <code>malloc</code> for temporary string copies during comparison to ensure the original dictionary remains intact for subsequent rounds of the game.</li>
+      </ul>
+    </section>
+
+    <!-- 6. CHALLENGES -->
+    <section>
+      <h2>Challenges & Solutions</h2>
+      <p>
+        <strong>The Problem:</strong> Handling duplicate letters was a major challenge. If the guess was "SPEED" and the secret word was "ABIDE," the program would initially try to mark both 'E's as misplaced (Yellow), which is logically incorrect.
+      </p>
+      <p>
+        <strong>The Solution:</strong> I implemented a "Character Cancellation" strategy. By creating temporary copies of the words and replacing matched characters with underscores (<code>_</code>) in a specific order (Greens first, then Yellows), I ensured each letter in the secret word is only "claimed" once per guess.
+      </p>
+    </section>
+
+    <!-- 7. LESSONS -->
+    <section>
+      <h2>What I Learned</h2>
+      <ul>
+        <li><strong>Algorithmic Pruning:</strong> Learned how to translate game rules into strict logical constraints that can be applied to large datasets.</li>
+        <li><strong>Global Definitions:</strong> Utilized <code>#define</code> macros for WORD_LENGTH and MAX_NUMBER_OF_WORDS to create a more maintainable and readable codebase.</li>
+        <li><strong>Data Transformation:</strong> Mastered the use of <code>tolower()</code> and <code>toupper()</code> to provide visual feedback while maintaining the underlying data's integrity.</li>
+      </ul>
+    </section>
+
+    <!-- 8. FUTURE WORK -->
+    <section>
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Integrate a "Best Start Word" recommendation based on my previous Wordle Strategizer project to reduce the average number of guesses.</li>
+        <li>Add a graphical progress bar to show the percentage of the dictionary eliminated after each turn.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- COMPONENT LOADER -->
+   <script src = "/assets/js/main.js"></script>
+
+</body>
+</html>
