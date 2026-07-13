@@ -1,71 +1,89 @@
-body {
-    background: linear-gradient(-45deg, #ba52ee, #3c6de7, #23a6d5, #23d5ab);
-      background-size: 400% 100%;
-      animation: gradient 5s ease infinite;
-  }
+:root {
+    /* Backgrounds */
+    --background: #FDF6ED;
+    --surface: #FFFFFF;
+    --surface-alt: #F7F1E8;
 
+    /* Brand Colors */
+    --primary: #778873;
+    --primary-hover: #687A64;
+    --primary-light: #A1BC98;
 
-  .index {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin: auto;
+    /* Borders */
+    --border: #DCCFC0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
+    /* Text */
+    --text: #2D2D2D;
+    --text-secondary: #5C5C5C;
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+    /* Effects */
+    --shadow: rgba(0,0,0,.08);
+}
 
-  .Section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+body{
+    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height:1.7;
+}
 
-  .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-  }
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:3rem 2rem;
+}
 
-  img {
-    width: 50%;
-  }
+h1{
+    color:var(--primary);
+    font-size:3rem;
+    font-weight:700;
+    margin-bottom:1rem;
 
-  #profilePic {
-    width: 128px;
-    height: 128px;
-    border: solid black 4px;
-    border-radius: 100%;
-  }
+    letter-spacing:-1px;
+}
 
-  #Socials {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
+.Section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .link {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    padding: 5px 20px;
-    justify-content: space-around;
-    background-color: rgb(213, 213, 213);
-    border: solid black 4px;
-    border-radius: 10px;
-    margin: 5px;
-    text-decoration: none;
-  }
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+img {
+  width: 50%;
+}
+
+#profilePic {
+  width: 128px;
+  height: 128px;
+  border: solid var(--border) 2px;
+  border-radius: 100%;
+}
+
+#Socials {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 5px 20px;
+  justify-content: space-around;
+  background-color: rgb(213, 213, 213);
+  border: solid black 1px;
+  border-radius: 10px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.center-text {
+  text-align: center;
+}
