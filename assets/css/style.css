@@ -96,6 +96,15 @@ img {
   border-radius: 100%;
 }
 
+.experience-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:2rem;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+    margin-bottom: 20px;
+}
+
 #Socials {
   display: flex;
   align-items: center;
