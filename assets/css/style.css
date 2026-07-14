@@ -42,6 +42,37 @@ h1{
     letter-spacing:-1px;
 }
 
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.project-links a{
+    background:var(--primary);
+    color:white;
+    border:none;
+}
+
+.project-links a:hover{
+    background:var(--primary-light);
+}
+
+.skills li{
+    background:var(--primary-light);
+    color:#2f2f2f;
+    font-weight:600;
+    list-style-type: none;;
+}
+
 .Section {
   display: flex;
   flex-direction: column;

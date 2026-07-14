@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
   <!--Other stylesheets used-->
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/components.css">
@@ -22,68 +25,109 @@
   <!--Other Basic information about me-->
   <main>
     <section class="hero">
-      <img id="profilePic" src="/assets/images/Profile.png" alt="image of Ethan Ky" />
+      <img id="profilePic" src="/assets/images/Profile.png" alt="Portrait of Ethan Ky" />
       <h1>Hi, I'm Ethan Ky.</h1>
       <p>
-        A computer Science graduate passionate about
-        software engineering, game development,
-        and building intuitive web applications.
+        I'm a Computer Science graduate with a passion for software engineering,
+        game development, and building intuitive web applications. I enjoy
+        creating software that is both functional and engaging, from interactive
+        games to full-stack web applications.
       </p>
     </section>
 
+    <div class="hero-buttons">
+      <a href="/projects-cards.html" class="btn btn-primary">View Projects</a>
+
+      <a href="" class="btn btn-disabled">Resume</a>
+
+      <a href="https://github.com/eky2429" target="_blank" class="btn btn-secondary">GitHub</a>
+    </div>
+
     <section class="featured-projects">
       <h1>Featured Projects</h1>
-      <p>
-        TBD...
-      </p>
+      <p>TBD...</p>
     </section>
 
     <section class="skills">
       <h1>Skills</h1>
       <h2>Programming Languages</h2>
       <ul>
-        <li>HTML <progress value="4" max="5"></progress> </li>
-        <li>CSS <progress value="4" max="5"></progress></li>
-        <li>Python <progress value="4" max="5"></progress></li>
-        <li>GDScript <progress value="4" max="5"></progress></li>
-        <li>C# <progress value="4" max="5"></progress></li>
-        <li>Java <progress value="4" max="5"></progress></li>
-        <li>SQL <progress value="4" max="5"></progress></li>
-        <li>React <progress value="4" max="5"></progress></li>
-        <li>C++ <progress value="3" max="5"></progress></li>
-        <li>C Language <progress value="3" max="5"></progress></li>
-        <li>Angular <progress value="3" max="5"></progress></li>
-        <li>JS <progress value="3" max="5"></progress></li>
-        <li>LaTeX <progress value="3" max="5"></progress></li>
-        <li>Lua <progress value="2" max="5"></progress></li>
-        <li>GoLang <progress value="2" max="5"></progress></li>
-        <li>F# <progress value="2" max="5"></progress></li>
-        <li>Scala <progress value="1" max="5"></progress></li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C#</li>
+        <li>C+++</li>
+        <li>C Language</li>
+        <li>SQL</li>
+        <li>GDScript</li>
       </ul>
 
-      <h3>Key</h3>
+      <h2>Front-End</h2>
       <ul>
-        <li>Expert <progress value="5" max="5"></progress></li>
-        <li>Proficient <progress value="4" max="5"></progress></li>
-        <li>Mid <progress value="4" max="5"></progress></li>
-        <li>Okay at... <progress value="4" max="5"></progress></li>
-        <li>Not proficient in... <progress value="4" max="5"></progress></li>
+        <li>React</li>
+        <li>Angular</li>
+        <li>Bootstrap</li>
+        <li>Tailwind</li>
       </ul>
 
-      <h2>Frameworks</h2>
+      <h2>Back-End</h2>
       <ul>
-        <li>Godot</li>
-        <li>Unity Studio</li>
-        <li>Visual Studio Code</li>
-        <li>Pycharm</li>
+        <li>Node.js</li>
+        <li>MySQL</li>
+        <li>REST APIs</li>
+      </ul>
+
+      <h2>Game Development</h2>
+      <ul>
+        <li>Godot / GDScript</li>
+        <li>Unity / C#</li>
+        <li>GDevelop</li>
+        <li>Clickteam Fusion</li>
+        <li>Code.org</li>
+      </ul>
+
+      <h2>Development Tools</h2>
+      <ul>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
+        <li>IntelliJ IDEA</li>
         <li>WebStorm</li>
-        <li>Android Studio</li>
-        <li>IntelliJ Idea</li>
-        <li>CLion</li>
-        <li>RubyMine</li>
+        <li>PyCharm</li>
         <li>DataGrip</li>
-        <li>Arduino IDE</li>
+        <li>Android Studio</li>
+        <li>Godot</li>
+        <li>Unity</li>
       </ul>
+
+      <h2>Soft Skills</h2>
+      <div>
+        <h3>Leadership</h3>
+        <ul>
+          <li>Lead a 5-person game development team (SIG-Game)</li>
+          <li>Make sure co-counselors were all on same page with decisions (Sports Camp)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Teaching</h3>
+        <ul>
+          <li>Computer Design Teaching Assistant</li>
+          <li>Sports Camp Counselor</li>
+          <li>ID Tech Instructor</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Collaboration</h3>
+        <ul>
+          <li>Agile/Scrum Development</li>
+          <li>Jira</li>
+          <li>Git / Github</li>
+        </ul>
+      </div>
     </section>
 
     <section class="experience">
@@ -242,6 +286,7 @@
     <!--Footer-->
     <div id="footer-placeholder"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 
