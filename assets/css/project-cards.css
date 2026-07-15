@@ -1,4 +1,9 @@
 /*projects.html*/
+
+main {
+  margin: 1rem;
+}
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -6,13 +11,90 @@
   padding: 1rem;
 }
 
-.course-card {
-  background-color: #f9f9f9;
-  border-left: 5px solid #0077cc;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.course-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:2rem;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
 }
+
+.course-section h2 {
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.course-section > p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.archive-project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.05);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.archive-project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.archive-project-card a {
+    margin-top: auto;
+}
+
+/*Porject links style*/
+.project-links a{
+    background:var(--primary);
+    color:white;
+    border:none;
+}
+
+.project-links a:hover{
+    background:var(--primary-light);
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 1rem 0;
+}
+
+.badges span {
+    background: var(--secondary);
+    padding: .3rem .75rem;
+    border-radius: 999px;
+    font-size: .85rem;
+}
+
+.course-section {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.course-section:last-child {
+    border-bottom: none;
+}
+
+/*OLD STYLING*/
 
 .course-card h3 {
   margin-top: 0;

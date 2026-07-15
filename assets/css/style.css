@@ -105,10 +105,65 @@ img {
     margin-bottom: 20px;
 }
 
+.education-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:2rem;
+    margin-bottom: 20px;
+}
+
 #Socials {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+
+.social-card {
+  background: white;
+  color: var(--primary);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border-color: var(--secondary);
+}
+
+.social-card:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 4px;
+}
+
+.social-card svg {
+  fill: var(--secondary);
+  transition: transform 0.2s ease;
+}
+
+.social-card:hover svg {
+  fill: var(--primary);
+  transform: scale(1.15);
+}
+
+.social-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.social-header h3 {
+    margin: 0;
 }
 
 .link {
