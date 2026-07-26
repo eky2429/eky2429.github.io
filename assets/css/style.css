@@ -20,6 +20,10 @@
     --shadow: rgba(0,0,0,.08);
 }
 
+html {
+    font-size: 16px;
+}
+
 body{
     font-family: "Inter", sans-serif;
     background: var(--background);
@@ -28,8 +32,8 @@ body{
 }
 
 main{
-    max-width:1000px;
-    margin:auto;
+    /* max-width:1000px; */
+    margin: 3rem;
     padding:3rem 2rem;
 }
 
@@ -213,4 +217,26 @@ img {
 
 .center-text {
   text-align: center;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .project-card p,
+    .archive-project-card p,
+    .hero p,
+    .about p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+
+    .project-card li,
+    .archive-project-card li {
+        font-size: 1.05rem;
+    }
+
+    main{
+        /* max-width:1000px; */
+        margin: 1rem;
+        padding:1rem 0.5rem;
+    }
 }
