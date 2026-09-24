@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Title | Ethan Ky</title>
 
   <!-- Global styles -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/projects.css">
-
   <!-- Optional: project-specific styles -->
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/projects.css">
 </head>
+
 <body>
 
   <!-- NAV (loaded via JS) -->
@@ -34,15 +34,15 @@
       <section class="project-section project-hero text-center">
 
         <p class="project-category">
-            WEB DEVELOPMENT
+            Website
         </p>
 
         <h1 class="display-4 fw-bold">
-          Book Overflow
+          Pitch IQ
         </h1>
 
         <p class="project-tagline lead">
-          A website that allows users to search for books and leave reviews on them.
+          A website that gives the user advice on how to throw baseball pitches.
         </p>
 
 
@@ -65,7 +65,7 @@
       <section class="project-section">
         <h2>Overview</h2>
         <p>
-          This was the first and only project for CS 480 (Database Systems). I collaborated in a group of 6 (including myself) to create a website that allows users to search for books and leave reviews on them. We used Django as our web framework and MySQL as our database; we also used an APi key to get data and store it in our database. The website allows users to create an account, search for books, leave reviews, and view other users' reviews.
+          This was the final project I had to do in CS 479 (Wearable Technologies). To put this simply, it is a site that connects to a device that the user wears on his / her hand like a glove. When the user throws a ball in the same hand that the glove is on, the website will display graphs based on when the user swung or let go of the ball. There is also a hand graph that shows the amount of pressure the user had in all fingers (except the pinky finger); it also displays the user's heart rate over time and the type of pitch the user did.
         </p>
       </section>
 
@@ -78,12 +78,12 @@
 
           <div class="col-md-4 project-info">
             <strong>Role</strong>
-            <p>Full-stack Developer</p>
+            <p>Web Developer / collaborator</p>
           </div>
 
           <div class="col-md-4 project-info">
             <strong>Timeline</strong>
-            <p>February 2025 - May 2025</p>
+            <p>April 2026 - May 2026</p>
           </div>
 
           <div class="col-md-4 project-info">
@@ -99,31 +99,23 @@
             <div class="tech-stack mt-2">
 
               <span class="tech-pill">
-                WebStorm
+                C/C++
               </span>
 
               <span class="tech-pill">
-                VS Code
+                Arduino
               </span>
 
               <span class="tech-pill">
-                HTML / CSS / JS
+                React
               </span>
 
               <span class="tech-pill">
-                Node.js
+                HTML / CSS
               </span>
 
               <span class="tech-pill">
-                Django
-              </span>
-
-              <span class="tech-pill">
-                Python
-              </span>
-
-              <span class="tech-pill">
-                MySQL
+                Git / Github
               </span>
 
             </div>
@@ -134,7 +126,7 @@
           <div class="col-md-4 project-info">
 
             <strong>Platform</strong>
-            <p>Browser</p>
+            <p>Web</p>
 
           </div>
 
@@ -148,9 +140,11 @@
       <section class="project-section">
         <h2>Key Features</h2>
         <ul class="list-group list-group-flush">
-          <li>Search for bllks by title, author, or genre</li>
-          <li>Leave reviews and ratings for books</li>
-          <li>Create a user profile with an email and password</li>
+          <li>Displays amount of pressue applied to ball</li>
+          <li>Displays grpahs that show how fast ball went and when user let go of ball</li>
+          <li>Evaluates swing of pitch and dteremines pitch type based on finger pressure(s)</li>
+          <li>Displays user's heart rate during the last 3 minutes on a graph</li>
+          <li>Displays a box showing if the user should take a break or not based on # of pitches done in 5 minutes.</li>
         </ul>
       </section>
 
@@ -160,33 +154,33 @@
         <div class="row g-3">
           <div class="col-md-6">
             <figure>
-              <img src="../assets/images/book-overflow/er-diagram.png" alt="er-diagram" class="project-image img-fluid rounded">
+              <img src="../assets/images/pitch-iq/UI.png" alt="User interface of program" class="project-image img-fluid rounded">
               <figcaption>
-                ER Diagram
+                User interface of program
               </figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure>
-              <img src="../assets/images/book-overflow/HomePage.png" alt="home-page" class="project-image img-fluid rounded">
+              <img src="../assets/images/pitch-iq/HandChart.png" alt="Hand Chart" class="project-image img-fluid rounded">
               <figcaption>
-                Home Page
+                Example of throw displayed on chart
               </figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure>
-              <img src="../assets/images/book-overflow/LoginPage.png" alt="login" class="project-image img-fluid rounded">
+              <img src="../assets/images/pitch-iq/Schematics.png" alt="Schematics" class="project-image img-fluid rounded">
               <figcaption>
-                Login Page
+                Schematics of device
               </figcaption>
             </figure>
           </div>
           <div class="col-md-6">
             <figure>
-              <img src="../assets/images/book-overflow/RatingsSection.png" alt="Ratings" class="project-image img-fluid rounded">
+              <img src="../assets/images/pitch-iq/Circuit Diagram.png" alt="Circuit Diagram" class="project-image img-fluid rounded">
               <figcaption>
-                Ratings Page
+                Circuit Diagram of Device
               </figcaption>
             </figure>
           </div>
@@ -197,8 +191,8 @@
       <section class="project-section">
         <h2>Technical Highlights</h2>
         <ul class="list-group list-group-flush">
-          <li>Used a database to store book and user information</li>
-        <li>Used SQL queries to retrieve and filter data</li>
+          <li>Used nested if statements to determine pitch type based on fsr values for each finger and give advice for each pitch</li>
+          <li>Implemented code that determines peaks in accelerometer and FSRs to count number of pitches done in the last 5 minutes</li>
         </ul>
       </section>
 
@@ -206,7 +200,7 @@
       <section class="project-section">
         <h2>Challenges</h2>
         <p>
-          One challenge I faced was adding the review component of the website. ...
+          One challenge I faced was creating a new graph component from a template my partner made since I am not used to using other modules in React. I just had to read the code to try to understand where the value property is used and how each component (Respnsive Container, LineChart, CartesianGrid, etc.) inside the graph is styled.
         </p>
       </section>
 
@@ -214,8 +208,8 @@
       <section class="project-section">
         <h2>Lessons Learned</h2>
         <ul class="list-group list-group-flush">
-          <li>How to structure larger projects</li>
-          <li>Debugging complex state issues</li>
+          <li>Utilizing other modules in React</li>
+          <li>Data analysis</li>
         </ul>
       </section>
 
@@ -223,8 +217,9 @@
       <section class="project-section">
         <h2>Future Improvements</h2>
         <ul class="list-group list-group-flush">
-          <li>Add multiplayer support</li>
-          <li>Improve animations</li>
+          <li>Utilize machine learning instead of threshold-based detections</li>
+          <li>Adding long-term data tracking for season-wde performance analysis</li>
+          <li>Expanding to mobile-friendly Progressive Web App (PWA) functionality</li>
         </ul>
       </section>
 
@@ -235,7 +230,12 @@
   <div id="footer-placeholder"></div>
 
   <!-- COMPONENT LOADER -->
-   <script src = "/assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
