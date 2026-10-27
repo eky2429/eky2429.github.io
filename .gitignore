@@ -46,4 +46,4 @@ core.chrome*
 */.DS_Store
 .DS_Store
 assets/.DS_Store
-assets/images/.DS_Store
+public/images/.DS_Store

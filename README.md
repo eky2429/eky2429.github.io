@@ -7,3 +7,9 @@ Color palette to use:
 - #A1BC98
 - #DCCFC0
 - #FDF6ED
+
+## How to run the site
+- Install ruby 3.2.1
+- install "bundle"
+- type "bundle install"
+- type "bundle exec ruby app.rb"

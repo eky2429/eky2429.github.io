@@ -12,6 +12,7 @@ gem "puma", "~> 5.0"
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'rerun'
 end
 
 group :development, :test do

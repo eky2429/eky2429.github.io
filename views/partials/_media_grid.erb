@@ -1,0 +1,12 @@
+<div class="row g-3">
+  <%images.each do |img| %>
+    <div class="col-md-6">
+      <figure>
+        <img src=<%=img[:src] %> alt=<%=img[:alt] %> class="project-image img-fluid rounded">
+        <figcaption>
+          <%=img[:alt] %>
+        </figcaption>
+      </figure>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,40 @@
+<div id="carouselExampleCaptions" class="carousel slide rounded overflow-hidden">
+  <div class="carousel-indicators">
+    <% images.each_with_index do |img, index| %>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="<%= index %>"
+        class="<%= 'active' if index == 0 %>"
+        <%= 'aria-current="true"' if index == 0 %>
+        aria-label="Slide <%= index + 1 %>">
+      </button>
+    <% end %>
+  </div>
+
+  <div class="carousel-inner">
+    <% images.each_with_index do |img, index| %>
+      <div class="carousel-item <%= 'active' if index == 0 %>">
+        <img
+          src="<%= img[:src] %>"
+          alt="<%= img[:alt] %>"
+          class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <p><%= img[:alt] %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

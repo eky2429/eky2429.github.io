@@ -1,0 +1,28 @@
+<!--1st section - Featured Projects-->
+<h1>Projects</h1>
+<p>Over 80+ projects completed!</p>
+<p>Across Web Development, Game Development, Software Engineering, AI, Hardware, and Mobile Applications</p>
+
+<h1>Featured Projects</h1>
+<p>Some of my favorite software, game development, and engineering projects.</p>
+<section id="featured-projects" class="course-section mb-5">
+  <%#the flat_map combines all projects from the sections in one array!  %>
+  <% featured_projects = sections.flat_map { |section| section[:projects] }.select { |project| project[:is_featured] } %>
+
+  <%featured_projects.each do |project| %>
+    <%= partial :'partials/_project_card', project: project %>
+  <% end %>
+</section>
+
+<!--2nd section - Projects-->
+<h1>Project Archive</h1>
+<div style="margin-bottom: 20px;">
+  Search:
+  <input type="text"/>
+
+  <p>Sections received: <%= sections.length %></p>
+
+  <% sections.each do |section| %>
+    <%= partial :'partials/_section_card', section: section %>
+  <% end %>
+</div>

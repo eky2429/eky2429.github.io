@@ -1,0 +1,157 @@
+<div class="container-lg">
+
+  <div class="mb-4">
+    <a href="/projects" class="btn btn-outline-secondary">
+      ← Back to Projects
+    </a>
+  </div>
+
+  <!-- 1. HERO / HEADER -->
+  <section class="project-section project-hero text-center">
+
+    <p class="project-category">
+      <%=project_data[:type] %>
+    </p>
+
+    <h1 class="display-4 fw-bold">
+      <%=project_data[:name] %>
+    </h1>
+
+    <p class="project-tagline lead">
+      <%=project_data[:tagline] %>
+    </p>
+
+
+    <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+
+      <a class="btn btn-success" href=<%=project_data[:github_link].length > 0? project_data[:github_link]: "" %> target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+
+
+      <a class="btn btn-outline-success" href=<%=project_data[:demo_link].length > 0? project_data[:demo_link]: "" %> target="_blank" rel="noopener noreferrer">
+        Live Demo
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- 2. OVERVIEW -->
+  <section class="project-section">
+    <h2>Overview</h2>
+    <p>
+      <%=project_data[:overview] %>
+    </p>
+  </section>
+
+  <!--2.1 Project Information-->
+  <section class="project-section">
+
+    <h2>Project Information</h2>
+
+    <div class="row gy-4">
+
+      <div class="col-md-4 project-info">
+        <strong>Role</strong>
+        <p><%=project_data[:overview] %></p>
+      </div>
+
+      <div class="col-md-4 project-info">
+        <strong>Timeline</strong>
+         <p><%=project_data[:timeline] %></p>
+      </div>
+
+      <div class="col-md-4 project-info">
+        <strong>Status</strong>
+        <p><%=project_data[:status] %></p>
+      </div>
+
+
+      <div class="col-md-12 project-info">
+
+        <strong>Technologies</strong>
+
+        <div class="tech-stack mt-2">
+          <%project_data[:technologies].each do |tech|  %>
+            <span class="tech-pill">
+              <%=tech %>
+            </span>
+          <% end %>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 project-info">
+        <strong>Platform</strong>
+        <p><%=project_data[:platform] %></p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 3. FEATURES -->
+  <section class="project-section">
+    <h2>Key Features</h2>
+
+    <p>How to read text:<br/>
+      <u>Underline</u> = New feature not present in orignal version
+    </p>
+
+    <ul class="list-group list-group-flush">
+      <%project_data[:features].each do |feature|  %>
+          <li><%=feature %></li>
+      <% end %>
+    </ul>
+  </section>
+
+  <!-- 4 MEDIA -->
+  <section class="project-section">
+    <h2>Screenshots</h2>
+    <%if project_data[:images].length <=4 %>
+      <%= partial :'partials/_media_grid', images: project_data[:images] %>
+    <%else %>
+      <%= partial :'partials/_media_carosel', images: project_data[:images] %>
+    <% end %>
+  </section>
+
+  <!-- 5. TECHNICAL HIGHLIGHTS -->
+  <section class="project-section">
+    <h2>Technical Highlights</h2>
+    <ul class="list-group list-group-flush">
+      <%project_data[:tech_details].each do |tech_detail|  %>
+        <li><%=tech_detail %></li>
+      <% end %>
+    </ul>
+  </section>
+
+  <!-- 6. CHALLENGES -->
+  <section class="project-section">
+    <h2>Challenges</h2>
+    <p>
+      <%=project_data[:challenge] %>
+    </p>
+  </section>
+
+  <!-- 7. LESSONS LEARNED -->
+  <section class="project-section">
+    <h2>Lessons Learned</h2>
+    <ul class="list-group list-group-flush">
+      <%project_data[:lessons].each do |lesson|  %>
+        <li><%=lesson %></li>
+      <% end %>
+    </ul>
+  </section>
+
+  <!-- 8. FUTURE IMPROVEMENTS -->
+  <section class="project-section">
+    <h2>Future Improvements</h2>
+    <ul class="list-group list-group-flush">
+      <%project_data[:improvements].each do |improvement|  %>
+        <li><%=improvement %></li>
+      <% end %>
+    </ul>
+  </section>
+
+</div>

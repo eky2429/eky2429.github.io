@@ -1,0 +1,10 @@
+<section class="course-section mb-5">
+  <h2><%=section[:name] %></h2>
+  <p>Project count: <%=section[:projects].length %></p>
+
+  <div class="project-grid">
+    <% section[:projects].each do |project| %>
+      <%= partial :'partials/_project_card', project: project %>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<article class="archive-project-card">
+  <h3><%=project[:name] %></h3>
+  <div class="badges">
+    <% project[:badges].each do |badge| %>
+      <span><%= badge %></span>
+    <% end %>
+  </div>
+  <p>
+    <%=project[:text] %>
+  </p>
+  <a href=<%=project[:page_url].length > 0? project[:page_url]: "#" %>>View Project<%=project[:page_url].length > 0? "" : " (TBD)"%></a>
+</article>
