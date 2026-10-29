@@ -8,5 +8,10 @@
   <p>
     <%=project[:text] %>
   </p>
-  <a href=<%=project[:page_url].length > 0? project[:page_url]: "#" %>>View Project<%=project[:page_url].length > 0? "" : " (TBD)"%></a>
+
+  <%if project[:slug] %>
+    <a href=<%= "/projects/" +project[:slug] %>>View Project</a>
+  <% else %>
+    <p>View Project (TBD)</p>
+  <% end %>
 </article>

@@ -2,13 +2,28 @@ require "sinatra"
 require "sinatra/reloader"
 require 'erb'
 require_relative 'projects'
-require_relative 'pacman-data'
+
+
+#Called to reload the projec when changes were made...
+configure do
+  also_reload 'projects.rb'
+end
 
 #This allows the site create the navbar and footer
 helpers do
   def partial(template, locals = {})
     erb template, layout: false, locals: locals
   end
+end
+
+# This helps the site find the project data that matches each slug
+helpers do
+  def find_project(slug)
+    PROJECT_DATA
+      .flat_map { |section| section[:projects] } #gets the array of projects
+      .find { |project| project[:slug] == slug } #Finds the project that has the specific slug
+  end
+
 end
 
 get'/' do
@@ -22,8 +37,13 @@ get'/projects' do
   erb :projects, locals: {sections: PROJECT_DATA, page: "projects"}
 end
 
-get'/pac-survivor' do
-  # puts PACMAN_DATA
+#Gets the path to other projects (single-project pages)
+get '/projects/:slug' do
+  project = find_project(params[:slug])
 
-  erb :project_page, locals: {project_data: PACMAN_DATA, page: "project-page"}
+  halt 404, "Project not found" unless project
+
+  puts project
+  erb :project_page, locals: {project_data: project, page: "project-page"}
+
 end

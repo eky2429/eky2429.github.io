@@ -4,9 +4,9 @@ PROJECT_DATA = [
     projects: [
       {
         name: "Wumpus Program",
+        slug: "wumpus-program",
         badges: ["🟢 Finished", "C Language"],
         text: "Developed a console-based implementation of <i>Hunt the Wumpus</i> using C, including game logic, player movement, and interactive command handling.",
-        page_url: "",
         is_featured: false
       },
       {
@@ -218,11 +218,61 @@ PROJECT_DATA = [
     name: "CS 440: Software Engineering I",
     projects: [
       {
+        # Information used on the projects listing
         name: "Pacman Battle Royale 99",
+        slug: "pacman-battle-royale-99-99",
         badges: ["🟢 Finished", "Godot", "GDScript", "AI", "Pathfinding", "Agile", "Jira", "Team Project"],
         text: "Collaborated on a multiplayer Pac-Man battle royale game in Godot, implementing unique ghost AI behaviors, collectible power-ups, gameplay balancing, and team-based software development practices using Agile and Jira.",
-        page_url: "/pac-survivor",
-        is_featured: true
+        page_url: "/projects/pacman-battle-royale-99-99",
+        is_featured: true,
+
+        #Information used on the detailed project page
+        hero_info: {
+          project_type: "GAME DEVELOPMENT",
+          tagline: "A competitive Pac-Man inspired game featuring custom ghost AI behaviors and strategic gameplay.",
+          github_link: "",
+          demo_link: "https://www.youtube.com/embed/zvjc11vBQ5w?si=5shmfw3zEOT_l9_L",
+        },
+        overview_info: {
+          overview: <<~HTML,
+              Pacman Battle Royale 99 is an exciting game that combines classic Pac-Man elements with survival mechanics.
+            
+              Context: This game was originally made as a class project (Pacman Battle Royale 99; see the projects page). But I decided to remake it <a href="https://genius.com/Meghan-trainor-all-about-that-bass-lyrics">"from the bottom to the top" - Megan Trainor</a>.
+            
+              The original version did not have the best coding practices, like lines of code for UI used in Pac-Man or vice versa. Also, we did not focus too much on sound design (and I am usually a stickler for it), so I revamped the audio experience to make it more immersive. This is what to expect from the final version!
+              
+              Note: The game title says "Pac Survivor" because that was the name we came up with for our project (based on the original concept called "Pacman Battle Royale 99" by another group.
+            HTML
+          role: "Solo Developer",
+          timeline: "February 2025 - May 2025" ,
+          status: "Completed",
+          technologies: %w[Godot GDScript Jira Github],
+          platform: "Windows PC",
+        },
+        features: ["Added Pacman Movement and 1st level layout",
+                   "Added <s>bone crack</s>, music, and sounds in game files",
+                   "Added waka-waka sound pacman makes when eating pellets",
+                   "Added Score text in UI",
+                   "Added ghosts with eye movment",
+                   "Added custom behavior for each ghost (Blinky = chasing pacman; Pinky = same as Blinky but also fast; Inky = ambusher; Clyde = randomizer...)",
+                   "Added power pellet",
+                   "Added different states for ghosts: run, def, eaten, scatter",
+                   "Added chase state for ghosts in pacman is within line of sight",
+                   "Added main menu",
+                   "Added sounds for ghosts",
+                   "Added fruit and chase music",
+                   "Added game over text overlay"],
+        images: [
+          {src:"/images/pacman-battle-royale-99/MainMenu.png", alt: "Main menu"},
+          {src:"/images/pacman-battle-royale-99/Start.png", alt: "How game starts"},
+          {src:"/images/pacman-battle-royale-99/Eaten.png", alt: "Eating ghosts"},
+          {src:"/images/pacman-battle-royale-99/Dies.png", alt: "Pacman Dies"},
+          {src:"/images/pacman-battle-royale-99/GameOver.png", alt: "Game Over"},
+        ],
+        tech_details: ["Used a state machine to manage game flow", "Separated UI logic from core gameplay", "Implemented reusable components"],
+        challenge: "The main challenge was implementing the best coding practices since this was a group project, so my group members wrote redundant code when it could be simplified. To fix that, I personally made the final changes to the code to simplify it while maintaining the original functionality it had.",
+        lessons: ["How to structure larger projects", "Debugging complex state issues"],
+        improvements: ["Add multiplayer support", "Improve animations"]
       }
     ]
   },
@@ -257,9 +307,9 @@ PROJECT_DATA = [
     projects: [
       {
         name: "EmotiTunes",
+        slug: "emotitunes",
         badges: ["🟢 Finished", "HTML", "CSS", "JavaScript", "Spotify API", "UI/UX", "Team Project"],
         text: "Worked on a team to develop a web application that generates personalized Spotify playlists based on a user’s mood and music preferences. Implemented customizable accessibility settings, including themes, font styles, and font sizes, to improve the user experience.",
-        page_url: "/projects/emotitunes.html",
         is_featured: true
       }
     ]
@@ -304,7 +354,6 @@ PROJECT_DATA = [
         name: "PPL Interpreter (C++)",
         badges: ["🟢 Finished", "C++", "Interpreter", "Parsing"],
         text: "Reimplemented the Plain Programming Language interpreter in C++, demonstrating equivalent parsing and execution logic in a statically typed language.",
-        page_url: "",
         is_featured: false
       }
     ]
@@ -314,9 +363,9 @@ PROJECT_DATA = [
     projects: [
       {
         name: "Book Overflow",
+        slug: "book-overflow",
         badges: ["🟢 Finished", "HTML", "CSS", "JavaScript", "SQL", "REST API", "Authentication", "Team Project"],
         text: "Worked on a team to develop a full-stack web application that allows users to browse books, submit reviews, and manage accounts using SQL databases, REST APIs, and user authentication.",
-        page_url: "/projects/book-overflow.html",
         is_featured: true
       }
     ]
@@ -366,9 +415,9 @@ PROJECT_DATA = [
       },
       {
         name: "Pitch IQ",
+        slug: "pitch-iq",
         badges: ["🟢 Finished", "Arduino", "C++", "React", "JavaScript", "Embedded Systems", "Wearables", "Sensors", "Team Project"],
         text: "Collaborated on a four-person team to develop a wearable baseball training system that analyzes pitch timing and identifies pitch types using embedded sensors, with a React-based web interface for displaying performance feedback.",
-        page_url: "/projects/pitch-iq.html",
         is_featured: true
       }
     ]
@@ -549,9 +598,9 @@ PROJECT_DATA = [
     projects: [
       {
         name: "The Bunker Fell",
+        slug: "the-bunker-fell",
         badges: ["🟢 Finished", "Unity", "C#", "Godot", "GDScript", "Team Project"],
         text: "Collaborated on a five-person team to develop a top-down survival escape game, contributing gameplay systems, scripting, and overall project coordination.",
-        page_url: "/projects/the-bunker-fell.html",
         is_featured: true
       },
       {
@@ -648,9 +697,9 @@ PROJECT_DATA = [
     projects: [
       {
         name: "Savings Application",
+        slug: "savings-application",
         badges: ["🟢 Finished", "Python", "PyQt5"],
         text: "Built a PyQt desktop application that automatically divides income into customizable budgeting categories based on the 50/30/20 budgeting rule.",
-        page_url: "/projects/savings-application.html",
         is_featured: true
       },
       {

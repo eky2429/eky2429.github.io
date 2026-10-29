@@ -10,7 +10,7 @@
   <section class="project-section project-hero text-center">
 
     <p class="project-category">
-      <%=project_data[:type] %>
+      <%=project_data[:hero_info][:project_type] %>
     </p>
 
     <h1 class="display-4 fw-bold">
@@ -18,18 +18,24 @@
     </h1>
 
     <p class="project-tagline lead">
-      <%=project_data[:tagline] %>
+      <%=project_data[:hero_info][:tagline] %>
     </p>
 
 
     <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
 
-      <a class="btn btn-success" href=<%=project_data[:github_link].length > 0? project_data[:github_link]: "" %> target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-success"
+         <%github_link = project_data[:hero_info][:github_link]%>
+         href=<%=github_link.length > 0? github_link: "#" %>
+        target="_blank" rel="noopener noreferrer">
         GitHub
       </a>
 
 
-      <a class="btn btn-outline-success" href=<%=project_data[:demo_link].length > 0? project_data[:demo_link]: "" %> target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-outline-success"
+         <%demo_link = project_data[:hero_info][:demo_link]%>
+         href=<%=demo_link.length > 0? demo_link: "#" %>
+           target="_blank" rel="noopener noreferrer">
         Live Demo
       </a>
 
@@ -41,7 +47,7 @@
   <section class="project-section">
     <h2>Overview</h2>
     <p>
-      <%=project_data[:overview] %>
+      <%=project_data[:overview_info][:overview] %>
     </p>
   </section>
 
@@ -54,17 +60,17 @@
 
       <div class="col-md-4 project-info">
         <strong>Role</strong>
-        <p><%=project_data[:overview] %></p>
+        <p><%=project_data[:overview_info][:role] %></p>
       </div>
 
       <div class="col-md-4 project-info">
         <strong>Timeline</strong>
-         <p><%=project_data[:timeline] %></p>
+         <p><%=project_data[:overview_info][:timeline] %></p>
       </div>
 
       <div class="col-md-4 project-info">
         <strong>Status</strong>
-        <p><%=project_data[:status] %></p>
+        <p><%=project_data[:overview_info][:status] %></p>
       </div>
 
 
@@ -73,7 +79,7 @@
         <strong>Technologies</strong>
 
         <div class="tech-stack mt-2">
-          <%project_data[:technologies].each do |tech|  %>
+          <%project_data[:overview_info][:technologies].each do |tech|  %>
             <span class="tech-pill">
               <%=tech %>
             </span>
@@ -84,7 +90,7 @@
 
       <div class="col-md-4 project-info">
         <strong>Platform</strong>
-        <p><%=project_data[:platform] %></p>
+        <p><%=project_data[:overview_info][:platform] %></p>
       </div>
 
     </div>

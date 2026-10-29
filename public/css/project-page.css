@@ -88,3 +88,13 @@
     overflow:hidden;
     border-radius:16px;
 }
+
+.text-shadow {
+    color: white;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px  2px 0 #000,
+        2px  2px 0 #000,
+        0 0 5px rgba(0,0,0,0.5); /* extra shadow for depth */
+}
