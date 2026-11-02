@@ -220,7 +220,7 @@ PROJECT_DATA = [
       {
         # Information used on the projects listing
         name: "Pacman Battle Royale 99",
-        slug: "pacman-battle-royale-99-99",
+        slug: "pacman-battle-royale-99",
         badges: ["🟢 Finished", "Godot", "GDScript", "AI", "Pathfinding", "Agile", "Jira", "Team Project"],
         text: "Collaborated on a multiplayer Pac-Man battle royale game in Godot, implementing unique ghost AI behaviors, collectible power-ups, gameplay balancing, and team-based software development practices using Agile and Jira.",
         page_url: "/projects/pacman-battle-royale-99-99",
@@ -310,7 +310,73 @@ PROJECT_DATA = [
         slug: "emotitunes",
         badges: ["🟢 Finished", "HTML", "CSS", "JavaScript", "Spotify API", "UI/UX", "Team Project"],
         text: "Worked on a team to develop a web application that generates personalized Spotify playlists based on a user’s mood and music preferences. Implemented customizable accessibility settings, including themes, font styles, and font sizes, to improve the user experience.",
-        is_featured: true
+        is_featured: true,
+
+        hero_info: {
+          project_type: "WEB DEVELOPMENT",
+          tagline: "Discover music that matches your mood through an interactive quiz and AI-powered Spotify playlists.",
+          github_link: "",
+          demo_link: "",
+        },
+
+        overview_info: {
+          overview: "Emotitunes is a mood-based music recommendation website developed as a group project for UIC's User Interface Design and Programming (CS 422) course. Our team conducted user studies to understand what users wanted from a music recommendation system. Using the feedback we collected, we developed wireframes and interactive prototypes in Figma before implementing the final website using HTML, CSS, and JavaScript. The application allows users to complete a questionnaire, receive personalized music recommendations, and customize their browsing experience.",
+          role: "Front-End Developer (Team Member)",
+          timeline: "November 2025 - December 2025",
+          status: "Completed",
+          technologies: %w[HTML CSS JavaScript Node.js Spotify_API OpenAI_API Figma Render],
+          platform: "Browser",
+        },
+
+        features: [
+          "Interactive 10-question quiz that evaluates the user's mood and generates a personalized playlist.",
+          "AI-powered music recommendations using the OpenAI API and Spotify API.",
+          "Spotify playlist generation allowing users to save and share personalized playlists.",
+          "Customizable settings page with options to change the website's color theme, font size, and other visual preferences.",
+          "Persistent user preferences using JavaScript localStorage.",
+        ],
+
+        images: [
+          {
+            src: "/images/emotitunes/Emotitunes.png",
+            alt: "Emotitunes Homepage",
+          },
+          {
+            src: "/images/emotitunes/Quiz.png",
+            alt: "Quiz Page",
+          },
+          {
+            src: "/images/emotitunes/Settings.png",
+            alt: "Settings Page",
+          },
+        ],
+
+        tech_details: [
+          "Developed the front-end questionnaire consisting of 10 questions to determine user moods and generate personalized music recommendations.",
+          "Implemented a settings page allowing users to customize the website's appearance, including color themes and font sizes.",
+          "Used JavaScript localStorage to persist user preferences in the browser, serializing settings into JSON for storage and retrieval.",
+          "Collaborated on a web application integrating the OpenAI API and Spotify API to generate personalized music playlists.",
+          "Used Figma to create wireframes and prototypes before implementing the final website.",
+          "Deployed the application using Render so the professor could access and evaluate the completed project.",
+        ],
+
+        challenge: "One challenge involved persisting user customization preferences, such as color themes and font sizes, using JavaScript localStorage. This required figuring out how to organize and serialize settings into JSON so that user preferences could be retrieved and applied consistently. Another challenge was coordinating development responsibilities and maintaining project progress when some team members contributed less than expected.",
+
+        lessons: [
+          "Learned the importance of user-centered design when developing applications.",
+          "Gained experience conducting user studies and incorporating feedback through iterative design.",
+          "Developed front-end programming skills by implementing an interactive questionnaire and customizable settings interface.",
+          "Learned how to use JavaScript localStorage and JSON serialization to persist user preferences.",
+          "Gained experience collaborating on a group project involving external APIs and multiple technologies.",
+          "Practiced deploying a web application using Render.",
+        ],
+
+        improvements: [
+          "Improve the music recommendation algorithm to provide more accurate recommendations based on user responses.",
+          "Expand the questionnaire to support more nuanced moods and music preferences.",
+          "Improve accessibility by providing additional customization options and supporting assistive technologies.",
+          "Enhance responsiveness across desktop, tablet, and mobile devices.",
+        ],
       }
     ]
   },
@@ -366,7 +432,88 @@ PROJECT_DATA = [
         slug: "book-overflow",
         badges: ["🟢 Finished", "HTML", "CSS", "JavaScript", "SQL", "REST API", "Authentication", "Team Project"],
         text: "Worked on a team to develop a full-stack web application that allows users to browse books, submit reviews, and manage accounts using SQL databases, REST APIs, and user authentication.",
-        is_featured: true
+        is_featured: true,
+
+        hero_info: {
+          project_type: "WEB DEVELOPMENT",
+          tagline: "Discover books, explore reviews, and share your thoughts through a community-driven book review platform.",
+          github_link: "",
+          demo_link: "",
+        },
+
+        overview_info: {
+          overview: "Book Overflow is a book discovery and review website developed as a group project for UIC's Database Systems (CS 480) course. Working in a team of six, we developed an application that allows users to create accounts, browse books retrieved through the Open Library API, and submit numerical ratings and written reviews. The project involved integrating an external API with a locally hosted backend and MySQL database to manage book information, user accounts, and reviews.",
+          role: "Full-Stack Developer (Ratings & Reviews)",
+          timeline: "November 2025 - December 2025",
+          status: "Completed",
+          technologies: %w[HTML CSS JavaScript Node.js MySQL OpenLibrary_API],
+          platform: "Browser (Locally Hosted)",
+        },
+
+        features: [
+          "User authentication with email and password.",
+          "Dynamic homepage displaying books retrieved through the Open Library API.",
+          "Book discovery through a browsable collection of available titles.",
+          "Ratings and reviews system allowing users to submit numerical ratings and multiple written reviews for individual books.",
+          "Ratings page displaying user-submitted reviews and ratings retrieved from the database.",
+        ],
+
+        images: [
+          {
+            src: "/images/book-overflow/er-diagram.png",
+            alt: "Entity Relationship Diagram illustrating the database structure and relationships between books, users, and reviews.",
+          },
+          {
+            src: "/images/book-overflow/HomePage.png",
+            alt: "Book Overflow homepage displaying the available book collection.",
+          },
+          {
+            src: "/images/book-overflow/SignUpPage.png",
+            alt: "Book Overflow sign up page featuring email and password authentication.",
+          },
+          {
+            src: "/images/book-overflow/LoginPage.png",
+            alt: "Book Overflow login page featuring email and password authentication.",
+          },
+          {
+            src: "/images/book-overflow/REsultsPage.png",
+            alt: "Book Overflow results page displaying results.",
+          },
+          {
+            src: "/images/book-overflow/RatingsSection.png",
+            alt: "Book Overflow ratings page displaying numerical ratings and written reviews submitted by users.",
+          },
+
+        ],
+
+        tech_details: [
+          "Developed the front-end ratings and reviews page, allowing users to submit numerical ratings and written reviews.",
+          "Connected the ratings interface with backend functionality to retrieve and display user-submitted reviews from the database.",
+          "Modified backend fetch URL functionality to resolve issues retrieving and displaying application data.",
+          "Integrated the Open Library API to retrieve book information and populate the application's database.",
+          "Used SQL queries to retrieve, filter, and manage book and review information.",
+          "Designed a relational database structure to organize book, user, and review information.",
+          "Developed and debugged backend functionality using Node.js.",
+          "Ran the application using a locally hosted server and MySQL database.",
+        ],
+
+        challenge: "One challenge involved debugging backend functionality when a particular page failed to display as expected. After investigating the issue, I discovered that the problem was caused by a small typo. I also worked on resolving backend fetch URL issues to ensure the application could retrieve the appropriate data. These experiences reinforced the importance of carefully examining code, tracing errors, and systematically debugging frontend-backend interactions.",
+
+        lessons: [
+          "Learned how to structure and organize a larger full-stack web application.",
+          "Gained experience working with backend development and database integration.",
+          "Developed an understanding of relational database design and SQL queries.",
+          "Learned how to integrate external APIs with a database-driven application.",
+          "Gained experience debugging backend issues and troubleshooting frontend-backend interactions.",
+          "Practiced developing interactive interfaces that retrieve and display database information.",
+        ],
+
+        improvements: [
+          "Implement a shopping cart allowing users to purchase books directly through the website.",
+          "Improve the ratings and review system with additional filtering and sorting options.",
+          "Expand book discovery functionality with additional search filters and recommendations.",
+          "Improve the user interface and overall browsing experience."
+        ]
       }
     ]
   },
@@ -418,7 +565,82 @@ PROJECT_DATA = [
         slug: "pitch-iq",
         badges: ["🟢 Finished", "Arduino", "C++", "React", "JavaScript", "Embedded Systems", "Wearables", "Sensors", "Team Project"],
         text: "Collaborated on a four-person team to develop a wearable baseball training system that analyzes pitch timing and identifies pitch types using embedded sensors, with a React-based web interface for displaying performance feedback.",
-        is_featured: true
+        is_featured: true,
+
+        hero_info: {
+          project_type: "WEB DEVELOPMENT / Wearable Technology",
+          tagline: "Improve your baseball pitching technique with wearable sensor data, performance analytics, and personalized feedback.",
+          github_link: "",
+          demo_link: "",
+        },
+
+        overview_info: {
+          overview: "Pitch IQ is a baseball pitching analysis application developed as a group project for UIC's Wearable Technologies (CS 479) course. Working in a team of five, we developed a wearable glove equipped with sensors that collect data while users practice throwing baseball pitches. The accompanying React website visualizes collected sensor data through interactive graphs, tracks pitching performance, and provides feedback on pitching technique and physical exertion.",
+          role: "Web Developer",
+          timeline: "April 2026 - May 2026",
+          status: "Completed",
+          technologies: %w[HTML CSS JavaScript React Recharts Arduino C C++],
+          platform: "Web Browser (Connected Wearable Device)",
+        },
+
+        features: [
+          "Interactive hand pressure visualization displaying sensor readings from individual fingers (excluding the pinky finger).",
+          "Pitch analysis graphs displaying ball speed, acceleration, and release timing.",
+          "Continuously updating heart rate graph displaying the user's BPM over time.",
+          "Pitch classification and personalized recommendations based on finger pressure sensor readings.",
+          "Performance monitoring that tracks the number of pitches thrown within a five-minute window.",
+          "Rest recommendations that notify users when they should take a break based on pitching frequency and heart rate.",
+        ],
+
+        images: [
+          {
+            src: "/images/pitch-iq/UI.png",
+            alt: "Pitch IQ website interface displaying pitching analytics and performance feedback.",
+          },
+
+          {
+            src: "/images/pitch-iq/HandChart.png",
+            alt: "Hand pressure visualization displaying sensor readings collected during a baseball pitch.",
+          },
+
+          {
+            src: "/images/pitch-iq/Schematics.png",
+            alt: "Schematic illustrating the design and layout of the wearable pitching device.",
+          },
+
+          {
+            src: "/images/pitch-iq/CircuitDiagram.png",
+            alt: "Circuit diagram illustrating the electronic components and sensor connections of the wearable device.",
+          },
+        ],
+
+        tech_details: [
+          "Developed a continuously updating heart rate graph using React and Recharts to visualize incoming BPM readings.",
+          "Implemented a pitch advice popup that provides recommendations based on the detected pitch type.",
+          "Developed threshold-based pitch classification logic using force-sensitive resistor (FSR) readings from the index, middle, and thumb fingers.",
+          "Created predefined pitching recommendations for different pitch types, including fastballs, curveballs, sliders, and changeups.",
+          "Implemented a rest recommendation system that monitors pitching frequency within a five-minute interval and considers the user's heart rate.",
+          "Worked with existing React chart components, including ResponsiveContainer, LineChart, and CartesianGrid, to create and customize additional data visualizations.",
+          "Worked with wearable sensor data collected through an Arduino-based device.",
+        ],
+
+        challenge: "One challenge involved implementing additional graph components using an existing React and Recharts template created by a teammate. Since I was unfamiliar with some of the charting components, I had to examine the existing implementation and understand how components such as ResponsiveContainer, LineChart, and CartesianGrid worked together. This required reading and understanding another developer's code before adapting it to display the required sensor data.",
+
+        lessons: [
+          "Gained experience working with React components and third-party charting libraries.",
+          "Learned how to read, understand, and extend code written by other developers.",
+          "Developed experience visualizing and interpreting continuously updating sensor data.",
+          "Learned how wearable sensors can be used to collect and analyze physical performance data.",
+          "Gained experience implementing rule-based logic to analyze sensor readings and generate recommendations.",
+          "Gained experience collaborating on a multidisciplinary project involving hardware and software development.",
+        ],
+
+        improvements: [
+          "Replace threshold-based pitch classification with machine learning to improve detection accuracy.",
+          "Implement machine learning and generative AI to provide more personalized pitching recommendations.",
+          "Add long-term performance tracking to analyze pitching trends throughout a baseball season.",
+          "Develop a mobile-friendly Progressive Web App (PWA) to make pitching analytics more accessible.",
+        ],
       }
     ]
   },
@@ -601,7 +823,72 @@ PROJECT_DATA = [
         slug: "the-bunker-fell",
         badges: ["🟢 Finished", "Unity", "C#", "Godot", "GDScript", "Team Project"],
         text: "Collaborated on a five-person team to develop a top-down survival escape game, contributing gameplay systems, scripting, and overall project coordination.",
-        is_featured: true
+        is_featured: true,
+        hero_info: {
+          project_type: "GAME DEVELOPMENT",
+          tagline: "A third-person escape game where players navigate a bunker, fight enemies, switch weapons, and find their way to the exit.",
+          github_link: "",
+          demo_link: "",
+        },
+
+        overview_info: {
+          overview: "The Bunker Fell is a single-player, third-person escape game developed as a group project for UIC's ACM SIG-Game organization. Originally proposed and selected through a group voting process, the project began with a larger team of five members before eventually becoming a team of three. As Project Manager and Lead Developer, I led development and implemented most of the game's core systems, including its graph-based map structure, dynamic room-loading system, enemy spawning, and combat mechanics. The game uses a reusable room scene that dynamically loads objects and enemies based on the player's current location.",
+          role: "Project Manager and Lead Developer",
+          timeline: "March 2024 - November 2025",
+          status: "Completed",
+          technologies: %w[Godot GDScript Jira Git GitHub],
+          platform: "Windows PC / macOS / Linux",
+        },
+
+        features: [
+          "Third-person gameplay allowing players to navigate through a multi-room bunker.",
+          "Enemy spawning and collision-based combat mechanics.",
+          "Weapon switching system allowing players to change between available weapons.",
+          "Dynamic room loading system that reuses a single room scene and populates it with room-specific objects and enemies.",
+          "Graph-based bunker map connecting rooms through directional relationships.",
+        ],
+
+        images: [
+          {
+            src: "/images/the-bunker-fell/Fight.png",
+            alt: "The Bunker Fell gameplay showing the player at the beginning of a fight.",
+          },
+          {
+            src: "/images/the-bunker-fell/MiddleOfFight.png",
+            alt: "The Bunker Fell gameplay showing the player fighting enemies inside the bunker.",
+          },
+        ],
+
+        tech_details: [
+          "Designed and implemented a graph data structure to represent the bunker layout, using rooms as nodes connected through directional edges representing front, back, left, and right connections.",
+          "Developed a dynamic room-loading system that reuses a single room scene and instantiates room-specific objects and enemies based on the current room ID.",
+          "Created a JSON-based configuration system to store room-specific object information, including object types, positions, rotations, and enemy attributes such as type and health.",
+          "Implemented JSON data parsing and object instantiation to populate rooms dynamically during gameplay.",
+          "Added error handling that logs messages to the console when object attributes contain invalid data.",
+          "Implemented enemy spawning and collision-based combat mechanics.",
+          "Developed third-person player controls and a weapon-switching system.",
+          "Used Jira to help organize development tasks and coordinate project progress.",
+        ],
+
+        challenge: "One of the main challenges was designing a system to dynamically load different rooms without creating a separate scene for every room. I wanted to reuse the same room scene while changing its contents based on the player's current room. To accomplish this, I developed a JSON-based configuration system that associates each room ID with an array of objects to instantiate. Each object contains information such as its type, position, and rotation, while enemy entries also store attributes such as enemy type and health. I also implemented error handling to log invalid object attributes to the console, making it easier to identify configuration issues during development. Another challenge involved implementing the graph data structure that represented the bunker layout and connected individual rooms through directional edges.",
+
+        lessons: [
+          "Learned how to design and implement graph data structures to represent interconnected game environments.",
+          "Gained experience using JSON files to store and manage structured game data.",
+          "Developed a better understanding of dynamic scene loading and object instantiation in Godot.",
+          "Learned how to implement error handling when loading externally stored configuration data.",
+          "Recognized the importance of planning and establishing clear development goals when leading a collaborative project.",
+          "Gained experience coordinating a development team and implementing core gameplay systems.",
+        ],
+
+        improvements: [
+          "Add multiplayer support to allow multiple players to explore the bunker together.",
+          "Develop additional bunker levels with new environments and enemy encounters.",
+          "Introduce puzzles and interactive challenges to make exploration more engaging.",
+          "Implement a shop system with additional weapons, upgrades, and collectible items.",
+          "Add helper characters or companions to assist players during gameplay.",
+          "Expand player customization options.",
+        ],
       },
       {
         name: "Vampire Run",
@@ -700,7 +987,100 @@ PROJECT_DATA = [
         slug: "savings-application",
         badges: ["🟢 Finished", "Python", "PyQt5"],
         text: "Built a PyQt desktop application that automatically divides income into customizable budgeting categories based on the 50/30/20 budgeting rule.",
-        is_featured: true
+        is_featured: true,
+        hero_info: {
+
+          project_type: "Desktop Application",
+
+          tagline: "Simplify personal budgeting by dividing your paycheck into customizable categories with automatic calculations and persistent settings.",
+
+          github_link: "",
+
+          demo_link: "",
+
+        },
+
+        overview_info: {
+
+          overview: "The Savings Application is a personal budgeting tool originally developed to simplify the process of dividing paycheck income into different spending categories. Initially created as a console-based Python program in December 2024, I later redesigned it as a graphical desktop application using PyQt6 in December 2025. The application calculates how much money should be allocated to individual categories based on customizable percentages, allowing users to organize their finances using predefined budgeting rules or their own categories. User preferences and previous entries are saved locally using JSON files, allowing information to persist between sessions.",
+
+          role: "Solo Developer",
+
+          timeline: "December 2024 - December 2025",
+
+          status: "Completed",
+
+          technologies: %w[Python PyQt6 JSON],
+
+          platform: "Windows PC",
+
+        },
+
+        features: [
+
+          "Graphical user interface developed with PyQt6 for managing paycheck allocations.",
+
+          "Automatic paycheck calculations that display the dollar amount allocated to each budgeting category.",
+
+          "Predefined budgeting methods, including the 50/30/20 and 50/10/40 rules.",
+
+          "Customizable budgeting categories allowing users to create, rename, and manage their own bins.",
+
+          "Custom percentage allocations allowing users to determine how much of their paycheck goes into each category.",
+
+          "Immediate calculation results when users enter or modify paycheck information.",
+
+          "Persistent user preferences and previous entries stored locally using JSON files.",
+
+          "Input validation to help prevent invalid paycheck amounts and percentage allocations.",
+
+        ],
+
+        images: [
+          {
+            src: "/images/savings-app/Case1.png",
+            alt: "Savings Application displaying paycheck allocation calculations.",
+          },
+          {
+            src: "/images/savings-app/Case2.png",
+            alt: "Savings Application demonstrating another paycheck allocation scenario.",
+          },
+          {
+            src: "/images/savings-app/Case3.png",
+            alt: "Savings Application displaying budgeting results using customizable percentage allocations.",
+          },
+        # ADD Recent GUI for savings application
+
+        ],
+
+        tech_details: [
+          "Developed the application using Python and PyQt6 to create an interactive desktop interface.",
+          "Implemented automatic calculations to divide paycheck amounts into individual budgeting categories based on assigned percentages.",
+          "Developed predefined budgeting configurations, including the 50/30/20 and 50/10/40 allocation methods.",
+          "Implemented customizable budgeting categories, allowing users to create and rename bins and assign percentage allocations.",
+          "Used JSON files to store user settings and previous entries, allowing information to persist between application sessions.",
+          "Implemented input validation to handle invalid user entries and percentage allocations.",
+          "Redesigned an earlier console-based Python program into a graphical desktop application.",
+        ],
+
+        challenge: "One challenge involved transitioning the original console-based program into a graphical desktop application using PyQt6. This required restructuring the application's functionality to work with an interactive interface while maintaining the original paycheck calculation logic. Another important aspect was implementing persistent storage using JSON files so that users could retain their customized categories, percentage allocations, and previous entries after closing the application.",
+
+        lessons: [
+          "Gained experience developing desktop applications using Python and PyQt6.",
+          "Learned how to transition a console-based program into a graphical application.",
+          "Developed a better understanding of JSON serialization and persistent local storage.",
+          "Gained experience implementing customizable application settings and user-defined categories.",
+          "Improved my ability to validate user input and handle different calculation scenarios.",
+          "Learned how to organize application functionality to support a more flexible user experience.",
+        ],
+
+        improvements: [
+          "Add visual charts to help users understand how their paycheck is distributed across budgeting categories.",
+          "Implement historical tracking to compare paycheck allocations over time.",
+          "Add the ability to export budgeting information into CSV or spreadsheet files.",
+          "Introduce additional budgeting templates for different financial goals.",
+          "Improve the interface with additional customization options and accessibility features.",
+        ],
       },
       {
         name: "Description Maker",
