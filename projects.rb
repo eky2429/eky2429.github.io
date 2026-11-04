@@ -413,14 +413,126 @@ PROJECT_DATA = [
         name: "Sequenceable Collection",
         badges: ["🟢 Finished", "C++", "OOP", "Data Structures"],
         text: "Implemented a custom Sequenceable Collection class in C++, providing ordered storage and iterator-like functionality using object-oriented programming principles.",
-        page_url: "",
-        is_featured: false
+        slug: "proj3-sequenceable-collection",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "C++ Console Application",
+          tagline: "A dynamic array implementation demonstrating element insertion, memory management, and automatic capacity expansion.",
+          github_link: "",
+          demo_link: "",
+        },
+        overview_info: {
+          overview: "This project is a C++ console application developed independently for UIC's Object-Oriented Implementation (CS 474) course. The program demonstrates how a sequenceable collection can store and manage elements using a dynamically allocated array. Users can insert elements at either the front or back of the collection, view its current contents, and observe how its capacity expands as additional elements are inserted.",
+          role: "Solo Developer",
+          timeline: "November 5, 2025 - November 15, 2025",
+          status: "Completed",
+          technologies: %w[C++],
+          platform: "Command-Line Interface",
+        },
+        features: [
+          "Insert elements at either the front or back of the collection.",
+          "Display the current elements stored in the collection.",
+          "Automatically expand the collection's capacity when additional space is needed.",
+          "Demonstrate how the collection grows as more elements are inserted.",
+        ],
+        images: [
+          {
+            src: "/images/seq-col/Pic.png",
+            alt: "Example console output demonstrating element insertion and dynamic array expansion.",
+          },
+        ],
+        tech_details: [
+          "Implemented a sequenceable collection in C++ using a dynamically allocated array.",
+          "Developed insertion functionality allowing elements to be added at either end of the collection.",
+          "Implemented automatic resizing logic to allocate additional memory when the collection reaches its capacity.",
+          "Managed existing elements during resizing to preserve the collection's contents.",
+          "Handled element shifting when inserting values at the front of the collection.",
+          "Used AI-assisted tools, including ChatGPT and GitHub Copilot, to clarify assignment requirements and help develop test cases.",
+        ],
+        challenge: "One challenge involved implementing the dynamic array's resizing logic. When the collection reached its current capacity, I needed to allocate additional memory and preserve the existing elements during the resizing process. Inserting elements at the front also required shifting existing elements to make room for the new value. Another challenge involved interpreting some of the assignment requirements and developing appropriate test cases to verify the collection's behavior.",
+        lessons: [
+          "Learned how to implement a sequenceable collection using dynamic memory allocation in C++.",
+          "Gained experience managing array capacity and implementing automatic resizing.",
+          "Developed a better understanding of shifting elements when inserting values at different positions.",
+          "Practiced writing test cases to verify collection functionality.",
+          "Gained experience using AI-assisted development tools to clarify requirements and support testing.",
+        ],
+        improvements: [
+          "Implement element removal from both the front and back of the collection.",
+          "Add insertion functionality based on a specified index.",
+          "Expand test coverage to verify additional collection operations.",
+          "Improve console output to make collection expansion and element movement easier to visualize.",
+        ],
       },
       {
         name: "PPL Interpreter (C++)",
         badges: ["🟢 Finished", "C++", "Interpreter", "Parsing"],
         text: "Reimplemented the Plain Programming Language interpreter in C++, demonstrating equivalent parsing and execution logic in a statically typed language.",
-        is_featured: false
+        slug: "proj4-ppl-interpreter-cpp",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Programming Language / Interpreter",
+          tagline: "A C++ interpreter for PPL (Plain Programming Language), featuring custom tokenization, parsing, and instruction execution.",
+          github_link: "",
+          demo_link: "https://youtu.be/XWi4GQfCw-8"
+        },
+
+        overview_info: {
+          overview: "PPL Interpreter is a C++ implementation of a custom programming language developed for the final project in Object Oriented Languages and Environments (CS 474). The interpreter processes PPL scripts, identifies instructions, and executes operations involving variables, lists, arithmetic, and conditional execution. This project built upon concepts from an earlier Ruby interpreter project, requiring me to adapt the implementation to C++ and its memory-management requirements.",
+          role: "Sole Developer",
+          timeline: "November 2025 (Approximately 2 weeks)",
+          status: "Completed",
+          technologies: %w[C++],
+          platform: "Desktop"
+        },
+
+        features: [
+          "Conforms to the PPL language specification",
+          "Supports variable and list declarations and assignments",
+          "Performs basic arithmetic operations",
+          "Supports list operations including HEAD, TAIL, MERGE, and COPY",
+          "Evaluates conditions to determine which line of the script to execute next"
+        ],
+
+        images: [
+          {
+            src: "/images/ppl-interpreter-cpp/PPL-Script.png",
+            alt: "Example of a PPL script containing programming instructions"
+          },
+          {
+            src: "/images/ppl-interpreter-cpp/PPL-Output.png",
+            alt: "Output produced by the PPL C++ interpreter"
+          }
+        ],
+
+        tech_details: [
+          "Implemented a Token class to represent individual elements of the PPL language, including identifiers, keywords, and operations.",
+          "Developed a Lexer to process source code and convert individual lines into tokens.",
+          "Implemented a Parser to interpret tokens and determine which instructions should be executed.",
+          "Organized the interpreter into separate components, with a Lexer created for each line and the Parser responsible for processing it.",
+          "Designed an object-oriented instruction system using an Instruction base class and individual derived classes for each supported command.",
+          "Implemented separate header (.h) and source (.cpp) files for derived instruction classes.",
+          "Used C++ vectors to store variable values instead of manually managing raw pointers.",
+          "Implemented conditional execution by evaluating conditions and updating the interpreter's current line to determine the next instruction."
+        ],
+
+        challenge: "One of my main challenges was translating the interpreter's implementation from Ruby to C++. Although I had already spent considerable time developing the Token and Lexer components in the previous project, adapting the implementation to C++ introduced additional complexity, particularly around memory management. Initially, I considered using pointers to store variable values, but managing memory this way proved more difficult than anticipated. With AI-assisted guidance, I decided to use C++ vectors instead, simplifying storage and allowing me to focus more on the interpreter's functionality.",
+
+        lessons: [
+          "Gained experience translating an existing programming language implementation from Ruby to C++.",
+          "Learned more about C++ memory management and the challenges associated with manually managing pointers.",
+          "Developed a better understanding of STL containers, particularly std::vector, for storing and managing data.",
+          "Applied object-oriented programming principles through inheritance and a shared Instruction base class.",
+          "Learned to use AI as a debugging and problem-solving resource when evaluating implementation approaches."
+        ],
+
+        improvements: [
+          "Explore alternative memory-management approaches, including pointers and smart pointers, to better understand memory allocation, ownership, and efficiency.",
+          "Improve the interpreter's internal storage and memory-management strategy.",
+          "Expand the PPL language with additional instructions and functionality."
+        ]
       }
     ]
   },
