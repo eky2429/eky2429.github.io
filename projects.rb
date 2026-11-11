@@ -155,15 +155,117 @@ PROJECT_DATA = [
         name: "Gradient Shapes",
         badges: ["🟢 Finished", "P5.js", "OOP", "Procedural Generation", "Generative Art", "Perlin Noise"],
         text: "Developed a procedural art generator in P5.js that creates abstract geometric patterns using Perlin noise, randomized color palettes, and gradient interpolation.",
-        page_url: "",
-        is_featured: false
+        slug: "gradient-shapes",
+        is_featured: false,
+        hero_info: {
+          project_type: "Generative Art / Creative Coding",
+          tagline: "An exploration of procedural geometric art using randomized color palettes, gradients, and Perlin noise.",
+          github_link: "",
+          demo_link: "https://editor.p5js.org/eky2429/full/7iECbSBVk"
+        },
+
+        overview_info: {
+          overview: "Gradient Shapes is a generative art project created for Intro to Creative Coding in New Media Arts. The goal was to produce original artwork through code that could be printed on paper. Using P5.js, I developed a sketch that generates compositions of irregular quadrangles with randomized positioning, gradient color transitions, and procedural variations. By combining different color palettes with Perlin noise, each generation produces a distinct visual composition.",
+          role: "Sole Developer",
+          timeline: "September 2024",
+          status: "Completed",
+          technologies: %w[JavaScript P5.js],
+          platform: "Web"
+        },
+
+        features: [
+          "Generates abstract compositions using procedurally drawn quadrangles.",
+          "Applies gradient color transitions between multiple colors within a selected palette.",
+          "Selects from nine predefined color palettes to produce different visual styles.",
+          "Uses randomized parameters to vary the number and arrangement of shapes.",
+          "Introduces organic variations in shape positioning through Perlin noise.",
+          "Generates static artwork suitable for printing."
+        ],
+
+        images: [
+          {src:"/images/GradientShapes.png", alt: "One example of the gradient shapes art"},
+        ],
+
+        tech_details: [
+          "Developed a custom drawQuadangle() function using P5.js vertex() and beginShape() methods to generate irregular quadrilateral shapes.",
+          "Created nine manually selected color palettes using colors sourced from an online palette generator.",
+          "Used lerpColor() to interpolate between palette colors and produce gradient transitions.",
+          "Implemented nested for loops to generate and distribute shapes across a 1000 x 1000 canvas.",
+          "Used map() to calculate shape positions and distribute the composition across the canvas.",
+          "Applied Perlin noise through noise() to introduce procedural variations in shape positioning.",
+          "Used noiseSeed(5) to reproduce a preferred noise pattern while retaining randomized palette and composition settings.",
+          "Experimented with different shape counts, spacing, and noise levels to produce varied compositions."
+        ],
+
+        challenge: "One of the main challenges was finding the right balance between the number of shapes and the overall composition. Too many shapes could make the artwork feel overcrowded, while too few could leave excessive empty space. I experimented with different numbers of shapes per row and column, along with spacing and noise settings, until I found combinations that produced visually appealing results.",
+
+        lessons: [
+          "Learned how programming can be used as a creative medium to produce original generative artwork.",
+          "Gained experience experimenting with color theory, gradient transitions, and procedural geometric compositions.",
+          "Developed a better understanding of Perlin noise and how it can introduce organic variation into generated artwork.",
+          "Learned the importance of balancing visual density, spacing, and randomness when creating procedural compositions.",
+          "Discovered how experimentation and iteration can lead to more visually appealing artistic results."
+        ],
+
+        improvements: [
+          "Introduce additional geometric shapes and drawing functions to expand the range of possible compositions.",
+          "Add more controls for adjusting shape density, spacing, noise intensity, and color transitions.",
+          "Explore additional procedural techniques to create more complex textures and visual patterns.",
+          "Allow users to save and export generated compositions in print-ready formats."
+        ]
       },
       {
         name: "Drawing Shapes",
         badges: ["🟢 Finished", "P5.js", "OOP", "Animations", "Transforms"],
         text: "Developed an interactive graphics application in P5.js featuring animated object movement, randomized colors, keyboard-controlled transformations (translation, rotation, and scaling), and object-oriented programming.",
-        page_url: "",
-        is_featured: false
+        slug: "drawing-shapes",
+        is_featured: false,
+        hero_info: {
+          project_type: "Creative Coding / Interactive Art",
+          tagline: "An interactive generative artwork featuring rotating geometric patterns and bouncing discs.",
+          github_link: "",
+          demo_link: "https://editor.p5js.org/eky2429/full/zwsMELXpl"
+        },
+
+        overview_info: {
+          overview: "Bouncing Discs is an interactive generative artwork created with p5.js. The project features a background of independently rotating geometric shapes and five colorful discs that bounce around the canvas, changing colors upon hitting the boundaries. Users can interact with the artwork by moving, rotating, and scaling the entire scene through keyboard controls.",
+          role: "Individual Developer",
+          timeline: "October 2024 - November 2024",
+          status: "Completed",
+          technologies: %w[p5.js JavaScript],
+          platform: "Web"
+        },
+
+        features: [
+          "Procedurally generated background featuring a grid of geometric shapes with randomized polygon sides, rotation speeds, and directions.",
+          "Five independently animated discs that bounce off canvas boundaries and change colors upon collision.",
+          "Keyboard controls that allow users to translate, rotate, and scale the entire artwork."
+        ],
+
+        images: [
+          {src:"/images/DrawingShapes.png", alt: "Drawing Shapes page"},
+        ],
+
+        tech_details: [
+          "Implemented custom JavaScript constructors for geometric shapes, bouncing discs, and color management.",
+          "Used one-dimensional and two-dimensional arrays to organize and manage multiple animated objects.",
+          "Applied position, rotation, and scaling transformations to create interactive canvas movement.",
+          "Used randomized values to generate polygon configurations, movement speeds, directions, and RGB colors.",
+          "Implemented boundary detection to reverse disc movement and trigger color changes."
+        ],
+
+        challenge: "The main challenge was developing a creative concept that incorporated the assignment's requirements for movement, positioning, rotation, scaling, and user interaction. I decided to create an abstract geometric artwork combining independently rotating background shapes with bouncing, color-changing discs. I also experimented with keyboard controls that allowed users to manipulate the entire scene.",
+
+        lessons: [
+          "Gained experience creating animated generative artwork using p5.js.",
+          "Practiced using custom constructors and arrays to manage multiple independently animated objects.",
+          "Explored position, rotation, and scaling transformations in an interactive graphics environment."
+        ],
+
+        improvements: [
+          "Possible add a special disc that the user can spawn in the program and use arrow keys to move it around and interact with other discs"
+        ]
+
       },
       {
         name: "Flying Game (w BeatStep)",
@@ -896,12 +998,36 @@ PROJECT_DATA = [
             alt: "Original teaser artwork for Stuffed 2, credited to Fedriz Marini."
           },
           {
+            src: "/images/trof/MainMenu.png",
+            alt: "Offiical main menu for game."
+          },
+          {
             src: "/images/trof/HallwayLight.png",
             alt: "Hallway light mechanic implemented for the player's office."
           },
           {
+            src: "/images/trof/ShowStage.png",
+            alt: "All animatronics on the show stage"
+          },
+          {
+            src: "/images/trof/AIInfaredCommunication.png",
+            alt: "AI Infared Communiction - one of the mechanics used to push animatronics away from office"
+          },
+          {
+            src: "/images/trof/VentCam.png",
+            alt: "Jadie 2.0. in vent camera"
+          },
+          {
+            src: "/images/trof/InVent.png",
+            alt: "Jadie 2.0 animatronic inside vent."
+          },
+          {
             src: "/images/trof/InOffice.png",
             alt: "Jadie 2.0 animatronic appearing inside the player's office."
+          },
+          {
+            src: "/images/trof/JumpScare.png",
+            alt: "Jadie 2.0 animatronic jumpscaring player"
           }
         ],
 
