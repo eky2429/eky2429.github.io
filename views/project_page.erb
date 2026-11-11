@@ -160,4 +160,47 @@
     </ul>
   </section>
 
+  <!-- 9. CREDITS -->
+  <% if project_data[:credits] %>
+    <section class="project-section credits-section">
+      <h2>Credits & Acknowledgments</h2>
+
+      <div class="credits-card">
+
+        <div class="credits-header">
+          <div class="credits-icon">
+            <i class="bi bi-person-circle"></i>
+          </div>
+
+          <div>
+            <h3><%= project_data[:credits][:name] %></h3>
+            <span class="credits-role">
+              <%= project_data[:credits][:role] %>
+            </span>
+
+            <a
+              href="<%= project_data[:credits][:link] %>"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Profile
+              <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="credits-description">
+          <%= project_data[:credits][:description] %>
+        </p>
+
+        <div class="developer-credit">
+          <h4>Gameplay Development</h4>
+          <p>Ethan Ky</p>
+          <span>Programming, mechanics, and implementation.</span>
+        </div>
+
+      </div>
+    </section>
+  <% end %>
+
 </div>

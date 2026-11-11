@@ -67,7 +67,7 @@ main {
     margin-top: auto;
 }
 
-/*Porject links style*/
+/*Project links style*/
 .project-links a{
     background:var(--primary);
     color:white;
@@ -121,7 +121,7 @@ main {
 
 @media (max-width: 600px) {
   .projects-container {
-    grid-template-columns: fr;
+    grid-template-columns: 1fr;
   }
 }
 

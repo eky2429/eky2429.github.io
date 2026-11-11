@@ -98,3 +98,81 @@
         2px  2px 0 #000,
         0 0 5px rgba(0,0,0,0.5); /* extra shadow for depth */
 }
+
+.credits-card {
+    background: #FDF6ED;
+    border: 1px solid #DCCFC0;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 750px;
+}
+
+.credits-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.credits-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    background: #DCCFC0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #778873;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.credits-header h3 {
+    margin-bottom: 4px;
+}
+
+.credits-role {
+    display: block;
+    color: #778873;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.credits-header a {
+    color: #778873;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.credits-header a:hover {
+    text-decoration: underline;
+}
+
+.credits-description {
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+.developer-credit {
+    margin-top: 20px;
+    padding: 16px;
+    background: #E8E9DF;
+    border-radius: 8px;
+}
+
+.developer-credit h4 {
+    font-size: 0.85rem;
+    color: #778873;
+    margin-bottom: 6px;
+}
+
+.developer-credit p {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.developer-credit span {
+    font-size: 0.9rem;
+}

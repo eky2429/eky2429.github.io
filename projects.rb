@@ -854,8 +854,96 @@ PROJECT_DATA = [
         name: "Stuffed 2: The Return of Fedetronic",
         badges: ["🟢 Finished", "Godot", "Scripting", "Game Development"],
         text: "Created a fan-made FNAF-inspired game based on the original concept by Fedriz.",
-        page_url: "/projects/s2_trf.html",
-        is_featured: false
+        slug: "stuffed-2-the-return-of-fedetronic",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Horror / Survival Game",
+          tagline: "A fan-made revival of a cancelled indie horror game, featuring seven unique animatronics, interconnected defensive systems, and customizable gameplay.",
+          github_link: "",
+          demo_link: "https://youtu.be/PdQWHI8XhcA"
+        },
+
+        overview_info: {
+
+          overview: "Stuffed 2: The Return of Fedetronic (TRoF) is a personal game-development project inspired by an unreleased indie horror game originally planned by Fedriz in 2014. After contacting the original developer and receiving permission to use the game's assets, I independently developed my own interpretation of the game using Godot and GDScript. While preserving much of the original vision, including planned elements such as cutscenes, I developed my own gameplay systems centered around defending against seven unique animatronics.",
+          role: "Solo Developer",
+          timeline: "September 2025 - November 2025",
+          status: "Completed",
+          technologies: %w[Godot_4.5 GDScript],
+          target_platforms: %w[Windows macOS Linux],
+          attribution: "Almost all visual assets were originally created by Fedriz Marini and are used with his permission. The gameplay mechanics and implementation are my own interpretation of the original concept."
+        },
+
+        features: [
+          "Features seven animatronics with unique movement patterns and behaviors.",
+          "Uses predefined movement paths, timers, and individual difficulty settings to control animatronic behavior.",
+          "Includes an interactive camera system that allows players to monitor different rooms and navigate vent cameras.",
+          "Allows players to close available vents to prevent certain animatronics from entering the office.",
+          "Includes an AI Sensor that resets an animatronic to its original location when it reaches the office.",
+          "Features a Reprogram Sensor that resets an animatronic to its original location when activated through the camera system.",
+          "Implements a power-management system where cameras, lights, and other office equipment consume electricity.",
+          "Includes a phantom jumpscare that temporarily disables camera and monitor access for five seconds.",
+          "Features a custom night mode that allows players to configure animatronic difficulty.",
+          "Includes night progression, a 6 AM display, and transitions between consecutive nights.",
+          "Implements camera static and visual glitches to indicate animatronic movement.",
+          "Features cutscenes, jumpscares, and numerous sound effects."
+        ],
+
+        images: [
+          {
+            src: "/images/trof/Teaser.webp",
+            alt: "Original teaser artwork for Stuffed 2, credited to Fedriz Marini."
+          },
+          {
+            src: "/images/trof/HallwayLight.png",
+            alt: "Hallway light mechanic implemented for the player's office."
+          },
+          {
+            src: "/images/trof/InOffice.png",
+            alt: "Jadie 2.0 animatronic appearing inside the player's office."
+          }
+        ],
+
+        tech_details: [
+          "Developed the game using Godot 4.5 and GDScript.",
+          "Organized the project using separate scenes for the main menu, extras menu, office, camera system, and other gameplay elements.",
+          "Implemented a centralized global animatronic management script to store animatronic statistics, movement progress, timers, and related gameplay information.",
+          "Developed seven animatronics with distinct movement patterns, predefined paths, timers, and configurable difficulty levels.",
+          "Used state machines to manage gameplay behavior and animatronic states.",
+          "Implemented a signal-based communication system to coordinate interactions between different gameplay systems.",
+          "Used dictionaries and JSON to organize and manage game data.",
+          "Implemented camera monitoring with support for hallway and vent cameras.",
+          "Created a defensive vent system that allows players to close vents and prevent certain animatronics from entering.",
+          "Developed a power-management system that tracks electricity consumption from office equipment, with lights and cameras consuming additional power.",
+          "Implemented camera static and visual effects to communicate animatronic movement between rooms.",
+          "Used Godot's AnimationPlayer to control animations and gameplay sequences."
+        ],
+
+        challenge: "One of the most challenging parts of development was implementing the camera static and visual effects that appear when animatronics move. I wanted the static to have a longer pause between consecutive movement events, rather than appearing continuously. Managing these effects across multiple cameras made the implementation particularly challenging. I also encountered issues with multiple animatronics appearing in the office simultaneously instead of waiting for one another to leave or trigger a jumpscare. Additionally, some animatronics occasionally failed to jumpscare the player as intended. These issues required troubleshooting to ensure that the different gameplay systems interacted correctly.",
+
+        lessons: [
+          "Learned the importance of balancing enemy AI and difficulty to prevent multiple animatronics from overwhelming the player simultaneously.",
+          "Gained experience coordinating multiple gameplay systems using signals.",
+          "Improved my understanding of state machines, timers, and managing complex gameplay behavior.",
+          "Learned how to organize shared gameplay information using global scripts, dictionaries, and JSON.",
+          "Gained experience implementing visual effects and coordinating animations across multiple cameras.",
+          "Developed a better understanding of scene organization and the importance of maintainable code architecture."
+        ],
+
+        improvements: [
+          "Create a dedicated Animatronic class to encapsulate each animatronic's difficulty, movement pattern, timers, current location, and behavioral state. This would improve code organization and make individual animatronics easier to maintain and extend.",
+          "Improve animatronic scheduling and behavior balancing to prevent multiple enemies from overwhelming the player simultaneously.",
+          "Refine the camera static system to improve synchronization and visual consistency across multiple cameras.",
+          "Further optimize gameplay difficulty and defensive mechanics to provide a more balanced experience."
+        ],
+
+        credits: {
+          name: "Fedriz Marini",
+          role: "Original creator and Visual Asset Author",
+          link: "https://gamejolt.com/@Fedriz_Marini",
+          description: "Original visual assets and game concept are credited to Fedriz Marini, with permission granted for this project.\nGameplay programming and implementation: Ethan Ky"
+        }
       },
       {
         name: "Cake Defender 3 (Book Defender)",
