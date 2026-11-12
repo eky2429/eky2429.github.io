@@ -7,21 +7,157 @@ PROJECT_DATA = [
         slug: "wumpus-program",
         badges: ["🟢 Finished", "C Language"],
         text: "Developed a console-based implementation of <i>Hunt the Wumpus</i> using C, including game logic, player movement, and interactive command handling.",
-        is_featured: false
+        is_featured: false,
+        hero_info: {
+          project_type: "C Console Game",
+          tagline: "A console-based Hunt the Wumpus game featuring room navigation, hidden hazards, super-bats, and guided arrows.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Hunt the Wumpus is a console-based game developed for a Programming Practicum assignment. The game takes place in a cave containing 20 interconnected rooms, where the player must navigate around hazards and hunt the Wumpus. The project was developed individually under a two-week deadline. I initially created a version using fixed-size arrays, then expanded the game with additional mechanics and dynamic memory allocation.",
+          role: "Individual Developer",
+          timeline: "September 2022 - October 2022 (2 weeks)",
+          status: "Completed",
+          technologies: %w[C],
+          platform: "Windows / macOS (Replit)"
+        },
+
+        features: [
+          "Room Navigation: Move between interconnected rooms, with each room connected to three others.",
+          "Hazard Detection: Receive warnings when the Wumpus, bottomless pits, or super-bats are nearby.",
+          "Super-Bats: Encounter bats that transport the player to another room and relocate themselves.",
+          "Guided Arrows: Shoot arrows through up to three rooms to hunt the Wumpus, with ricochets when an invalid route is selected.",
+          "Randomized Positions: Place the player, Wumpus, hazards, bats, and arrow in unique rooms.",
+          "Game Controls: Display instructions and the cave layout, reset positions, reveal hidden locations, and exit the game."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Used a two-dimensional array to represent the cave's 20 rooms and their three adjacent rooms.",
+          "Implemented dynamic memory allocation to store room connections and temporary arrays.",
+          "Created a GameInfo structure to organize the positions of the player, Wumpus, pits, bats, and arrow.",
+          "Used pointers to access and modify dynamically allocated arrays and pass game data between functions.",
+          "Implemented functions to validate movement, identify adjacent rooms, relocate hazards, and calculate arrow movement."
+        ],
+
+        challenge: "One of the biggest challenges was figuring out how to represent the cave's room connections. I used a two-dimensional array to store the three rooms connected to each room, which allowed me to check valid player movements and determine how other game mechanics interacted with the cave layout.",
+
+        lessons: [
+          "Learned how to represent interconnected locations using a two-dimensional array.",
+          "Gained experience working with pointers and dynamically allocated memory in C.",
+          "Practiced breaking a larger program into smaller functions to manage game mechanics.",
+          "Learned how to expand an existing program by introducing additional features and managing more complex game state."
+        ],
+
+        improvements: []
       },
       {
         name: "Best Wordle Program",
         badges: ["🟢 Finished", "C Language"],
         text: "Developed a program that analyzes word frequency data to determine optimal starting words for Wordle.",
-        page_url: "",
-        is_featured: false
+        slug: "best-wordle-word-program",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "C Console Application",
+          tagline: "A Wordle helper that scores and ranks potential guesses against a list of possible answers.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "A console application developed for a Programming Practicum assignment to identify high-scoring Wordle guesses. The program reads professor-provided lists of possible answers and valid guesses, evaluates each guess against the possible answers, and ranks words based on a scoring algorithm. Although originally intended as a group assignment, I completed the implementation independently.",
+          role: "Individual Developer",
+          timeline: "October 2022",
+          status: "Completed",
+          technologies: %w[C],
+          platform: "Windows / macOS"
+        },
+
+        features: [
+          "Word List Processing: Reads possible Wordle answers and valid guesses from separate text files.",
+          "Guess Scoring: Evaluates candidate words against possible answers using letter matches and positional matches.",
+          "Word Ranking: Sorts candidate words by their calculated scores, with alphabetical ordering for ties.",
+          "First Guess Recommendations: Displays the highest-scoring words to help determine an initial guess.",
+          "Second Guess Recommendations: Evaluates potential follow-up guesses while accounting for letters used in the first guess."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Used file input to load the provided answer and guess lists.",
+          "Implemented a scoring algorithm that compares candidate guesses against possible answers.",
+          "Stored individual word scores using a custom structure containing each word and its calculated score.",
+          "Used dynamic memory allocation to accommodate the large word lists.",
+          "Used qsort() to rank words by score and alphabetically resolve ties."
+        ],
+
+        challenge: "The biggest challenge was implementing the scoring algorithm and keeping track of scores for thousands of candidate words. The program needed to evaluate each guess against a large list of possible answers, making it important to organize the word data and its corresponding scores correctly.",
+
+        lessons: [
+          "Gained experience implementing algorithms that process and compare large collections of data.",
+          "Practiced reading and processing external text files in C.",
+          "Strengthened understanding of structures, pointers, and dynamic memory allocation.",
+          "Learned to use sorting functions to organize algorithm results."
+        ],
+
+        improvements: []
       },
       {
         name: "Wordle Game Guesser",
         badges: ["🟢 Finished", "C Language"],
         text: "Implemented an automated Wordle solver that uses user feedback and elimination strategies to identify the correct word within a limited number of guesses.",
-        page_url: "",
-        is_featured: false
+        slug: "wordle-game-guesser",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "C Console Application",
+          tagline: "A Wordle-solving program that uses letter feedback to narrow down possible answers and discover the player's secret word.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "A console application developed for a Programming Practicum assignment in which the computer attempts to discover a five-letter word chosen by the player. The program uses feedback from each guess to eliminate words that cannot be the answer, progressively narrowing down the possibilities until the secret word is found. The assignment required the computer to solve the word in fewer than 15 guesses.",
+          role: "Individual Developer",
+          timeline: "November 2022",
+          status: "Completed",
+          technologies: %w[C],
+          platform: "Windows / macOS (Replit)"
+        },
+
+        features: [
+          "Interactive Word Selection: Allows the player to enter a secret five-letter word or select one randomly.",
+          "Automated Word Guessing: Selects candidate words from a dictionary containing 12,947 words.",
+          "Word Feedback: Identifies letters in the correct position, letters in the wrong position, and letters that are absent.",
+          "Candidate Elimination: Removes words that contradict the feedback from previous guesses.",
+          "Repeated Guessing: Continues selecting from the remaining candidates until the secret word is discovered."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Loaded a dictionary of possible words from an external text file using file input.",
+          "Used structures to store candidate words and their associated scores.",
+          "Implemented character-comparison logic to evaluate guesses against the secret word.",
+          "Developed an elimination algorithm that filters out words based on previous guess results.",
+          "Used qsort() to organize candidate words and prioritize words that had not been eliminated.",
+          "Managed word data using arrays, pointers, and string manipulation in C."
+        ],
+
+        challenge: "One of the biggest challenges was handling groups of words that shared nearly identical letters and differed by only one character. The algorithm sometimes struggled to distinguish between these possibilities and could exceed the assignment's 15-guess requirement for certain words. Although this limitation remained, the project demonstrated my ability to develop an automated guessing algorithm that progressively narrows down a large collection of possible answers.",
+
+        lessons: [
+          "Learned how to use feedback from previous attempts to narrow down possible solutions.",
+          "Gained experience implementing string-comparison logic, including handling repeated letters.",
+          "Practiced filtering and sorting large collections of data using C.",
+          "Developed a better understanding of how algorithms can progressively reduce a search space."
+        ],
+
+        improvements: []
       }
     ]
   },
@@ -271,8 +407,58 @@ PROJECT_DATA = [
         name: "Flying Game (w BeatStep)",
         badges: ["🟢 Finished", "P5.js", "OOP", "MIDI", "Game Development", "Hardware Integration"],
         text: "Developed a P5.js game that integrates an Arturia BeatStep MIDI controller for player movement, demonstrating external hardware integration and interactive gameplay.",
-        page_url: "",
-        is_featured: false
+        slug: "flying-game--beat-step",
+        is_featured: false,
+        hero_info: {
+          project_type: "Game Development / Creative Coding",
+          tagline: "A fixed-screen arcade game where players collect coins, avoid obstacles, and control their spaceship using a physical MIDI controller.",
+          github_link: "",
+          demo_link: "https://editor.p5js.org/eky2429/full/o4ES2Bmyy"
+        },
+
+        overview_info: {
+          overview: "Flying Game is a web-based arcade game developed using p5.js. Players control a UFO navigating a fixed-screen environment, collecting coins while avoiding obstacles. The objective is to reach a score of 25 to win. The game features multiple scenes, interactive UI elements, sound effects, background music, and integration with an Arturia BeatStep MIDI controller for physical gameplay controls.",
+          role: "Individual Developer",
+          timeline: "November 2024 - December 2024",
+          status: "Completed",
+          technologies: %w[p5.js JavaScript Arturia_BeatStep],
+          platform: "Web"
+        },
+
+        features: [
+          "Arcade-style gameplay where players control a UFO to collect coins and reach a target score of 25.",
+          "Positive and negative collectibles that respectively increase the score by 1 or decrease it by 5.",
+          "Elephant obstacle with collision detection that prevents the player from moving through it.",
+          "Arturia BeatStep integration, allowing physical controller pads to control player movement and dials to adjust music and sound effect volumes.",
+          "Multiple scenes including a main menu, gameplay instructions, game development information, gameplay, and victory screen.",
+          "Background music and sound effects for gameplay interactions."
+        ],
+
+        images: [
+          {src:"/images/FlyingGameMidi.png", alt: "Flying Game MIDI page"},
+          {src:"/images/flying-game-midi/MainMenu.png", alt: "Main Menu for Flying Game MIDI"},
+          {src:"/images/flying-game-midi/Controls.png", alt: "Controls for Flying Game MIDI"},
+        ],
+
+        tech_details: [
+          "Developed custom JavaScript classes to organize gameplay objects and interface components, including buttons, game objects, and progress bars.",
+          "Implemented separate functions for scene management, game object initialization, and individual object behaviors.",
+          "Created reusable collision detection functionality to handle interactions between the player, collectibles, and obstacles.",
+          "Implemented collision responses for the elephant obstacle by adjusting the player's position based on the direction of movement.",
+          "Integrated an external JavaScript script to connect the Arturia BeatStep controller to the web application.",
+          "Loaded and managed game sprites sourced from Code.org, along with background music and sound effects."
+        ],
+
+        challenge: "One of the main challenges was implementing collision detection and handling interactions between different game objects. In particular, preventing the player from passing through the elephant obstacle required additional logic to determine the direction of movement and reposition the player outside the obstacle's boundaries. Integrating the Arturia BeatStep controller also required connecting external hardware input to the web application.",
+
+        lessons: [
+          "Gained experience organizing larger JavaScript projects using custom classes and reusable functions.",
+          "Learned to implement collision detection and position adjustments for interactive game objects.",
+          "Gained experience integrating external hardware controls into a web-based application.",
+          "Practiced organizing game scenes, UI components, audio, and gameplay logic into separate systems."
+        ],
+
+        improvements: []
       }
     ]
   },

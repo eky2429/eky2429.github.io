@@ -115,11 +115,11 @@
   <!-- 4 MEDIA -->
   <section class="project-section">
     <h2>Screenshots</h2>
-    <%if project_data[:images].length <=4 %>
-      <%= partial :'partials/_media_grid', images: project_data[:images] %>
-    <%else %>
+    <%#if project_data[:images].length <=4 %>
+      <%#= partial :'partials/_media_grid', images: project_data[:images] %>
+    <%#else %>
       <%= partial :'partials/_media_carosel', images: project_data[:images] %>
-    <% end %>
+    <%# end %>
   </section>
 
   <!-- 5. TECHNICAL HIGHLIGHTS -->
@@ -151,14 +151,16 @@
   </section>
 
   <!-- 8. FUTURE IMPROVEMENTS -->
-  <section class="project-section">
-    <h2>Future Improvements</h2>
-    <ul class="list-group list-group-flush">
-      <%project_data[:improvements].each do |improvement|  %>
-        <li><%=improvement %></li>
-      <% end %>
-    </ul>
-  </section>
+  <%if project_data[:improvements].length >= 1 %>
+    <section class="project-section">
+      <h2>Future Improvements</h2>
+      <ul class="list-group list-group-flush">
+        <%project_data[:improvements].each do |improvement|  %>
+          <li><%=improvement %></li>
+        <% end %>
+      </ul>
+    </section>
+  <% end %>
 
   <!-- 9. CREDITS -->
   <% if project_data[:credits] %>
