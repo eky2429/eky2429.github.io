@@ -687,15 +687,118 @@ PROJECT_DATA = [
         name: "Calculator",
         badges: ["🟢 Finished", "Ruby", "CLI"],
         text: "Developed a Ruby console application that parses user input to perform basic arithmetic operations, including addition, subtraction, multiplication, and division.",
-        page_url: "",
-        is_featured: false
+        slug: "proj1--calculator",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Ruby Console Application",
+          tagline: "An interactive calculator supporting basic arithmetic, input validation, and automated testing.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "A console-based calculator developed as an individual assignment to practice Ruby programming with assistance from AI chatbots. The program evaluates arithmetic expressions through an interactive loop, supports both integer and floating-point division, and handles invalid inputs through exception handling. I also wrote automated tests using Ruby's Minitest framework to verify the calculator's functionality.",
+          role: "Individual Developer",
+          timeline: "September 2025",
+          status: "Completed",
+          technologies: %w[Ruby Minitest],
+          platform: "Windows / macOS"
+        },
+
+        features: [
+          "Arithmetic Operations: Supports addition, subtraction, multiplication, integer division, and floating-point division.",
+          "Interactive Calculator: Continuously accepts arithmetic expressions until the user chooses to exit.",
+          "Input Validation: Checks expression formatting, numeric values, and supported operators.",
+          "Exception Handling: Provides error messages for invalid expressions, unsupported operators, and division by zero.",
+          "Automated Testing: Includes test cases for arithmetic operations, invalid operators, incorrect formatting, and division by zero."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Organized calculator functionality within a reusable Ruby class using class methods.",
+          "Used a hash of lambda expressions to associate arithmetic operators with their corresponding operations.",
+          "Implemented exception handling using begin, rescue, and raise.",
+          "Used Ruby's Minitest framework to create automated tests and verify expected results.",
+          "Used assert_in_delta to account for floating-point comparison precision."
+        ],
+
+        challenge: "One of the biggest challenges was becoming familiar with automated testing and exception handling in Ruby. Since I had limited experience with these concepts, writing test cases and determining how to handle invalid expressions required additional practice and experimentation.",
+
+        lessons: [
+          "Gained experience organizing program functionality using Ruby classes and class methods.",
+          "Learned how to implement exception handling to manage invalid inputs and runtime errors.",
+          "Developed experience writing automated tests using Minitest.",
+          "Improved understanding of lambda expressions and using hashes to organize operations.",
+          "Practiced using AI chatbots as development tools while learning a new programming language."
+        ],
+
+        improvements: [
+          "Add a modulo (%) operator to support another common arithmetic operation.",
+          "Add an exponent operator (^) and parenthesis to support PEMDAS"
+        ]
       },
       {
         name: "PPL Interpreter",
         badges: ["🟢 Finished", "Ruby", "Interpreter", "Parsing"],
         text: "Built an interpreter in Ruby capable of parsing and executing Plain Programming Language (.ppl) scripts, evaluating variables and expressions.",
-        page_url: "",
-        is_featured: false
+        slug: "proj2--ppl-interpreter",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Programming Language Interpreter",
+          tagline: "A Ruby-based interpreter that reads and executes commands from PPL scripts.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Developed an interpreter in Ruby that reads and executes commands from PPL script files. The project uses a lexer to tokenize input and a parser to interpret commands, manage variables, perform list operations, and control program execution.",
+          role: "Individual Developer",
+          timeline: "October 2025",
+          status: "Completed",
+          technologies: %w[Ruby],
+          platform: "Command-line"
+        },
+
+        features: [
+          "Reads and executes commands from PPL script files.",
+          "Tokenizes input using a custom lexer and interprets commands using a custom parser.",
+          "Supports integer and list variables, including assignment and arithmetic operations.",
+          "Implements list operations such as merging, copying, retrieving the head, and retrieving the tail.",
+          "Supports conditional jumps through the IF command, allowing programs to change execution flow based on variable values.",
+          "Provides error handling for invalid commands, undefined variables, and other execution errors.",
+          "Includes 20 separate test scripts to verify individual commands and combinations of operations."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Implemented a Lexer class to identify keywords, identifiers, and integer values from PPL commands.",
+          "Developed a Parser class to interpret tokens and execute commands through command-specific methods.",
+          "Used a hash to store variables and their associated values, supporting both integers and lists.",
+          "Used Ruby lambdas to associate command token types with their corresponding execution logic.",
+          "Tracked the program counter to manage sequential execution and conditional jumps.",
+          "Used exception handling to report errors encountered while parsing or executing a script.",
+          "Used AI-generated starter code as a structural reference, then modified and expanded it to meet the project's requirements.",
+          "Includes 20 separate test scripts covering individual commands, combinations of operations, and invalid inputs such as undefined variables."
+        ],
+
+        challenge: "Implementing the IF command was the biggest challenge. Unlike the other commands, which execute sequentially, IF required changing the program counter to jump to a specified line when a condition was met. This required coordinating the parser's execution result with the main program loop.",
+
+        lessons: [
+          "Learned how lexical analysis and parsing work together to interpret a programming language.",
+          "Gained experience designing and implementing a lexer and parser from scratch.",
+          "Improved understanding of object-oriented programming, Ruby lambdas, and exception handling.",
+          "Learned how to manage program execution using a program counter and conditional jumps.",
+          "Gained experience creating multiple test scripts to verify individual commands and more complex program behavior."
+        ],
+
+        improvements: [
+          "Improve error reporting by providing more detailed information about invalid commands and their expected syntax.",
+          "Expand the language with additional commands and arithmetic operations."
+        ]
       },
       {
         name: "Sequenceable Collection",
@@ -936,29 +1039,256 @@ PROJECT_DATA = [
         name: "Heart Halo",
         badges: ["🟢 Finished", "Arduino", "C++", "Processing", "Embedded Systems", "Wearables", "Data Visualization", "Team Project"],
         text: "Collaborated on a four-person team to develop a wearable heart-rate monitoring system using Arduino sensors, displaying heart-rate data and time spent in target heart-rate zones through interactive visualizations.",
-        page_url: "",
-        is_featured: false
+        slug: "heart-halo",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Wearable Technology",
+          tagline: "A wearable heart-rate monitoring system with workout, relaxation, and stress tracking modes.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Collaborated on a wearable heart-rate monitoring system that collects biometric data and presents personalized workout, relaxation, and stress-tracking experiences through a Processing application.",
+          role: "Software Developer (4-person team)",
+          timeline: "February 2026",
+          status: "Completed",
+          technologies: %w[Arduino C++ Processing Java ESP32],
+          platform: "Arduino/ESP32 and Desktop"
+        },
+
+        features: [
+          "Implemented three operating modes: Workout, Relaxation, and Stress.",
+          "Collected heart-rate readings from a wearable sensor through serial communication between the ESP32 and Processing application.",
+          "Established a resting heart-rate baseline and calculated age-based maximum heart rate to determine exercise intensity zones.",
+          "Displayed workout heart-rate data through a color-coded line graph and exercise-zone summaries.",
+          "Compared starting and ending heart rates during relaxation and stress sessions.",
+          "Implemented stress detection by comparing current heart rate against the user's resting baseline, triggering a physical buzzer alert when the threshold was exceeded.",
+          "Created an interactive interface with navigation buttons, session timers, and separate screens for each mode."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Developed the Arduino code to initialize the biometric sensor, retrieve heart-rate readings, and communicate with Processing through Serial.",
+          "Implemented the Processing application's Page enumeration and navigation logic to manage screen transitions and application states.",
+          "Created separate Processing scripts to organize the functionality of the baseline measurement, workout, relaxation, stress, and graph pages.",
+          "Used ArrayLists to store heart-rate readings and timestamps for session analysis and visualization.",
+          "Implemented heart-rate zone calculations and color-coded line rendering to represent changes in exercise intensity.",
+          "Established bidirectional Serial communication to send stress alerts from Processing to the ESP32.",
+          "Used a custom Button class to implement interactive controls with hover, press, and ripple animations.",
+          "Collaborated with another CS student on software development, with primary responsibility for implementation and additional support in debugging."
+        ],
+
+        challenge: "One of the biggest technical challenges was implementing the color-coded heart-rate line graph. The graph needed to change line colors according to the user's heart-rate zone, requiring the application to evaluate individual readings and determine the appropriate color for each segment.",
+
+        lessons: [
+          "Gained experience integrating Arduino hardware with a Java-based Processing application through Serial communication.",
+          "Improved understanding of finite state machines and managing transitions between multiple application screens.",
+          "Learned how to collect, organize, and visualize biometric data using timestamps and dynamic collections.",
+          "Gained experience implementing hardware feedback based on data processed by a desktop application.",
+          "Improved collaboration and debugging skills while working with a multidisciplinary team."
+        ],
+
+        improvements: [
+          "Make the heart-rate zone classifications consistent between the line graph and bar graph. The original implementation used five zones in the line graph but only three in the bar graph, which the professor found confusing.",
+          "Explore displaying heart-rate visualizations continuously during exercise rather than primarily presenting the results after the session."
+        ]
       },
       {
         name: "Halo Breath Band",
         badges: ["🟢 Finished", "Arduino", "C++", "Processing", "Embedded Systems", "Wearables", "Data Visualization", "Team Project"],
         text: "Collaborated on a four-person team to build a wearable breathing monitor that tracks heart rate and breathing rate while providing real-time visual feedback and breathing exercises to help users regulate their breathing.",
-        page_url: "",
-        is_featured: false
+        slug: "halo-breath-band",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Wearable Technology",
+          tagline: "A wearable ECG and respiratory monitoring system for tracking heart rate, breathing patterns, and exercise intensity.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Collaborated on a wearable monitoring system that collects ECG and respiratory data through chest and waist-mounted sensors. The application analyzes heart-rate and breathing patterns and provides visual feedback through fitness, stress-monitoring, and meditation modes.",
+          role: "Primary Processing Developer (4-person team)",
+          timeline: "February 2026 – March 2026",
+          status: "Completed",
+          technologies: %w[Arduino C++ Processing Java ESP32 ECG FSR],
+          platform: "Arduino/ESP32 and Desktop"
+        },
+
+        features: [
+          "Collected synchronized ECG and respiratory pressure readings from ECG and force-sensitive resistor (FSR) sensors.",
+          "Calculated heart rate by detecting ECG peaks and measuring the intervals between consecutive beats.",
+          "Tracked respiratory patterns by identifying inhalation and exhalation periods and calculating breathing rate and duration.",
+          "Displayed live ECG waveforms, heart-rate graphs, respiratory pressure graphs, and time spent in five heart-rate zones.",
+          "Provided Fitness, Stress Monitoring, and Meditation modes with visual feedback and session-specific statistics.",
+          "Evaluated breathing patterns against a target inhale-to-exhale ratio and displayed warnings when the breathing pattern did not meet the target.",
+          "Monitored heart-rate changes relative to the user's resting baseline to provide stress-related feedback.",
+          "Included settings for user age and baseline measurements to support heart-rate zone calculations."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Developed most of the Processing application, including its page navigation system and separate scripts for the application's main features.",
+          "Implemented an enum-based page management system to organize transitions between the main menu, settings, fitness, stress monitoring, and meditation screens.",
+          "Developed Arduino code to collect ECG and FSR readings at synchronized 20-millisecond intervals and transmit them to Processing through Serial communication.",
+          "Created simulated ECG waveform data to support software development and debugging while the physical hardware was being assembled.",
+          "Implemented heart-rate detection using ECG signal thresholds, beat intervals, and a minimum detection interval to reduce false readings.",
+          "Used ArrayLists and rolling data buffers to store biometric readings and timestamps for analysis and visualization.",
+          "Implemented respiratory signal analysis to estimate breathing rate and track inhalation and exhalation durations.",
+          "Created graphical visualizations for ECG signals, heart-rate trends, respiratory pressure, and time spent in five heart-rate zones.",
+          "Implemented lead-off detection in the Arduino code to identify disconnected ECG leads.",
+          "Collaborated with another CS student on software development, with primary responsibility for Processing implementation and additional support from the teammate in debugging."
+        ],
+
+        challenge: "One of the biggest challenges was detecting heart-rate peaks from the ECG signal. The application needed to identify individual heartbeats accurately enough to calculate the intervals between them. However, fluctuations and noise in the sensor readings made it difficult to distinguish actual heartbeats from unwanted signal changes.",
+
+        lessons: [
+          "Gained experience integrating multiple biometric sensors with an Arduino-based system and processing synchronized data streams.",
+          "Improved understanding of ECG signal processing and detecting heartbeats through threshold-based peak detection.",
+          "Learned how to generate simulated sensor data to support software development and debugging before physical hardware was ready.",
+          "Gained experience organizing a larger Processing application using enums, separate scripts, and shared data structures.",
+          "Improved understanding of respiratory signal analysis and using biometric measurements to provide feedback.",
+          "Developed experience collaborating with a multidisciplinary team while integrating software and physical hardware."
+        ],
+
+        improvements: [
+          "Improve the chest strap and waist mounting system to maintain more consistent skin contact with the sensors and increase comfort during longer periods of use.",
+          "Improve noise filtering and smoothing algorithms to produce more stable heart-rate and breathing-rate calculations. Sensor noise caused fluctuations in BPM readings and inconsistent inhalation and exhalation detection."
+        ]
       },
       {
         name: "Brain Rot",
         badges: ["🟢 Finished", "Arduino", "C++", "Processing", "Wearables", "Touch Sensors", "Team Project"],
         text: "Collaborated on a four-person team to create a wearable touch-sensitive controller that allows users to play a virtual piano and control a racing game using conductive copper touch sensors.",
-        page_url: "",
-        is_featured: false
+        slug: "brain-rot",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Wearable Technology",
+          tagline: "An interactive skin-interface system that uses capacitive touch sensors to control a piano and a racing simulation.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Collaborated on a wearable interface that uses capacitive touch electrodes and a flex sensor to interact with desktop applications. The system supports a piano activity and a racing simulation, while an OpenAI integration provides educational content within the piano interface.",
+          role: "Processing Developer (4-person team)",
+          timeline: "March 2026",
+          status: "Completed",
+          technologies: %w[Arduino C++ Processing Java MPR121 OpenAI_API],
+          platform: "Arduino hardware and Desktop"
+        },
+
+        features: [
+          "Mapped capacitive touch electrodes to interactive inputs, allowing users to control desktop activities through a wearable interface.",
+          "Developed a piano activity in which users could play musical notes using all ten capacitive touch electrodes.",
+          "Integrated a flex sensor to provide additional input for the interactive activities.",
+          "Developed a racing simulation in which users could control their car's speed using capacitive touch inputs and brake using the flex sensor.",
+          "Displayed a police car when the player's speed exceeded the simulated speed limit.",
+          "Integrated the OpenAI API to retrieve educational content and display it over the piano interface.",
+          "Created a status page that visualizes the states of the capacitive touch electrodes.",
+          "Implemented reusable interface components, including buttons with hover effects and a sound object class for audio playback."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Developed the main menu, status page, and race car page within the Processing application.",
+          "Created a reusable Button class with configurable alignment, hover detection, and visual feedback when the user moves the mouse over a button.",
+          "Implemented a SoundObject class to encapsulate audio playback operations, including playing, looping, pausing, stopping, and checking playback status.",
+          "Implemented the OpenAI API connection in Java to send prompts to the Chat Completions endpoint, parse the returned JSON response, and retrieve educational content for the piano interface.",
+          "Used an abstract Page class and polymorphism to organize application screens and delegate keyboard, mouse, and serial input handling to the active page.",
+          "Integrated Arduino hardware with the Processing application through I2C communication with an MPR121 capacitive touch controller and serial communication between the Arduino and desktop application.",
+          "Implemented touch-state tracking to detect when electrodes were pressed or released and transmit their states to the Processing application.",
+          "Worked on the racing simulation page, which used capacitive touch inputs to control vehicle speed and a flex sensor to control braking. The initial sample logic was generated with AI by a teammate, who also provided guidance on its implementation.",
+          "Used AI-generated sample code as a starting point for some page layouts and collaborated with a teammate when implementing unfamiliar functionality."
+        ],
+
+        challenge: "One of the biggest challenges was improving the racing simulation while debugging the physical hardware. The capacitive touch sensors occasionally registered ghost taps, causing inputs to activate even when the user was not intentionally touching an electrode. This made it difficult to achieve consistent interaction between the wearable hardware and the desktop application.",
+
+        lessons: [
+          "Gained experience integrating capacitive touch sensors and flex sensors with a desktop application.",
+          "Improved understanding of Arduino-to-Processing serial communication and handling hardware input states.",
+          "Gained experience organizing an interactive application using abstract classes, polymorphism, and reusable UI components.",
+          "Learned how to integrate an external API into a Java application and process JSON responses.",
+          "Developed experience debugging hardware-related input issues, including inconsistent capacitive touch readings and ghost taps.",
+          "Gained experience collaborating with a multidisciplinary team and using AI-generated sample code as a starting point while adapting it to project requirements."
+        ],
+
+        improvements: [
+          "Improve sensor reliability through better calibration and signal filtering to make capacitive touch inputs and flex sensor readings more consistent.",
+          "Reduce wiring and external hardware by making the wearable interface more integrated and comfortable to wear.",
+          "Expand the available activities with additional piano music options, more racing levels, and adjustable difficulty settings."
+        ]
       },
       {
         name: "Gaytora",
         badges: ["🟢 Finished", "Arduino", "C++", "Processing", "Wearables", "Sensors", "Data Analysis", "Team Project"],
         text: "Collaborated on a four-person team to develop a smart insole that analyzes walking patterns to classify gait types and provide recommendations for improving walking posture.",
-        page_url: "",
-        is_featured: false
+        slug: "gaytora",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Wearable Technology",
+          tagline: "A smart shoe insole that analyzes foot pressure and movement to identify walking patterns and gait abnormalities.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Developed a wearable smart shoe insole that uses force-sensitive resistors and an accelerometer to monitor foot pressure and movement. A Java-based Processing application visualizes sensor readings, tracks movement metrics, and classifies gait patterns to provide feedback about walking behavior.",
+          role: "UI Developer and Gait Data Developer (4-person team)",
+          timeline: "March 2026 - April 2026",
+          status: "Completed",
+          technologies: %w[C C++ Java Arduino Processing FSR MPU6050 Fritzing],
+          platform: "Arduino hardware and desktop application"
+        },
+
+        features: [
+          "Real-time monitoring of four foot-pressure sensors and an accelerometer to visualize changes in pressure and movement.",
+          "Five concurrent sensor graphs with configurable scaling and rolling data histories.",
+          "Foot pressure heatmap that visualizes pressure distribution across different sensor locations.",
+          "Movement tracking that estimates step count, cadence, and walking or running status.",
+          "Gait classification system that identifies five walking patterns: Normal, In-toeing, Out-toeing, Tiptoeing, and Heel Walking.",
+          "Gait profile comparison and educational pages that explain detected walking patterns and provide recommendations.",
+          "Movement analysis using recent sensor readings and stance-phase filtering to support real-time gait classification."
+        ],
+
+        images: [
+        ],
+
+        tech_details: [
+          "Designed the initial layouts for all three Processing application pages, organizing sensor visualizations, gait comparisons, and educational recommendations into a multi-page interface.",
+          "Developed the initial GaitData implementation to process foot-pressure readings, track steps and cadence, and classify walking patterns using pressure distribution ratios.",
+          "Collaborated on refining gait classification conditions and threshold values to better align sensor readings with the expected characteristics of each walking pattern.",
+          "Implemented a SensorGraph class to manage five concurrent sensor streams using fixed-size history arrays and configurable scaling.",
+          "Integrated four force-sensitive resistors (FSRs) and an MPU-6050 accelerometer with an Arduino microcontroller using analog inputs, I2C communication, and serial data transmission.",
+          "Created a foot-pressure heatmap to represent sensor readings visually and help identify pressure distribution across the insole.",
+          "Created Fritzing wiring schematics documenting the sensor connections and I2C communication architecture.",
+          "Used recent sensor samples and stance-phase filtering to calculate gait metrics and update the application's predicted gait classification."
+        ],
+
+        challenge: "One of the biggest challenges was obtaining reliable sensor readings and accurately identifying gait patterns. The physical insole did not consistently capture the expected walking patterns, and the initial classification conditions did not always correspond to the collected sensor values. The team refined the classification thresholds to improve the accuracy of gait identification. Hardware reliability also remained a challenge, as some gait types were difficult to detect consistently during testing.",
+
+        lessons: [
+          "Gained experience integrating multiple hardware sensors, including force-sensitive resistors and an accelerometer, into a wearable technology project.",
+          "Learned how sensor noise, calibration, and inconsistent physical readings can affect data processing and classification accuracy.",
+          "Developed a better understanding of gait analysis through foot-pressure distribution, stance-phase detection, and movement tracking.",
+          "Improved Java and Processing development skills by building reusable graph components and organizing a multi-page sensor visualization application.",
+          "Gained experience collaborating across computer science and biomedical engineering disciplines to develop and troubleshoot a hardware-software system."
+        ],
+
+        improvements: [
+          "Improve sensor reliability through better calibration and filtering techniques to reduce noise and inconsistent readings.",
+          "Redesign the hardware into a fully integrated wearable device, such as an embedded smart shoe, to improve comfort and usability.",
+          "Enhance gait classification through more advanced real-time analysis or machine learning models.",
+          "Improve the consistency of gait detection so that all walking patterns can be identified reliably under different testing conditions."
+        ]
       },
       {
         name: "Pitch IQ",
