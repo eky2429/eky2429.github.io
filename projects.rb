@@ -168,43 +168,383 @@ PROJECT_DATA = [
         name: "Gerrymandering Program",
         badges: ["🟢 Finished", "C++"],
         text: "Implemented an algorithm to analyze voting distributions and identify potential gerrymandering patterns.",
-        page_url: "",
-        is_featured: false
+        slug: "gerrymandering-program",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "C++ Data Analysis Program",
+          tagline: "A command-line program that analyzes district-level voting data to identify potential gerrymandering through wasted-vote and efficiency-factor calculations.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Developed an individual C++ program that organizes voting information by district and state, calculates wasted Democratic and Republican votes, and determines whether a state meets the assignment's potential-gerrymandering criteria. The program reports state statistics and displays district-level party-vote distributions.",
+          role: "Developer (individual project)",
+          timeline: "January 2023",
+          status: "Completed",
+          technologies: %w[C++],
+          platform: "Command-line application"
+        },
+
+        features: [
+          "Stores Democratic and Republican vote totals for each district.",
+          "Calculates wasted votes for each party within every district.",
+          "Aggregates district-level data into state-level voting statistics.",
+          "Calculates an efficiency factor from the difference in wasted votes and total votes.",
+          "Flags states when they have at least three districts and an efficiency factor of 7% or greater.",
+          "Displays whether a searched state is considered gerrymandered, along with wasted-vote totals and eligible-voter data.",
+          "Plots each district's Democratic and Republican vote distribution using a text-based display."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Implemented DistrictInformation and StateInformation structs to organize district-level voting data and state-level analysis results.",
+          "Implemented the wasted-vote calculation for Democratic and Republican voters using the number of votes required to win a district.",
+          "Implemented state-level aggregation of total votes and wasted votes across all districts.",
+          "Calculated the efficiency factor as the absolute difference between each party's wasted votes divided by the total votes.",
+          "Applied the project's likely assignment requirements of a minimum of three districts and an efficiency factor of at least 7% when determining potential gerrymandering.",
+          "Used the course-provided ourvector container to store districts, states, and loaded-file information."
+        ],
+
+        challenge: "One of the biggest challenges was calculating wasted votes correctly, since the program needed to distinguish between votes beyond the amount needed to win and all votes cast for the losing party. Organizing the relationship between districts and states was also challenging because the program needed to preserve district-level data while producing accurate state-level totals and efficiency-factor results.",
+
+        lessons: [
+          "Improved C++ skills through designing structs that represent related district and state data.",
+          "Learned how to translate a mathematical rule into program logic for wasted-vote and efficiency-factor calculations.",
+          "Gained experience aggregating data from multiple records to produce state-level analysis results.",
+          "Practiced organizing program data so that district-level details could support higher-level state statistics.",
+          "Learned the importance of carefully matching comparison conditions in code to assignment requirements, such as the three-district minimum and 7% threshold."
+        ],
+
+        improvements: [
+          "Create a GUI to make the program more visually appealing and easier to use.",
+          "Replace the text-based district plot with charts or interactive visualizations.",
+          "Add clearer input validation and error messages for malformed or missing data files.",
+          "Allow users to compare multiple states and view efficiency-factor results side by side."
+        ]
       },
       {
         name: "Music Library",
         badges: ["🟢 Finished", "C++"],
         text: "Developed a console-based music library system using C++ data structures, including sets, maps, and search algorithms to organize and retrieve songs.",
-        page_url: "",
-        is_featured: false
+        slug: "music-library",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Data Structures",
+          tagline: "A C++ console application that manages a music library and supports flexible album, artist, and song searches.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Developed an individual C++ console program for managing a music library. The application stores albums in a map, uses sets to maintain unique artists and songs, imports and exports library data, displays library statistics, and searches by album, artist, or song using keyword combinations.",
+          role: "Developer (individual project; course starter code and helper functions provided)",
+          timeline: "February 2023",
+          status: "Completed",
+          technologies: %w[C++ std::map std::set],
+          platform: "Console application"
+        },
+
+        features: [
+          "Stores albums in a map, with each album containing sets of artists and songs.",
+          "Loads music-library data from a text file and exports the current library to a text file.",
+          "Ensures artists and song entries within an album remain unique through C++ sets.",
+          "Displays total album, unique-artist, and song counts.",
+          "Optionally displays the full album, artist, and song library listing.",
+          "Searches library data by album title, artist name, or song title.",
+          "Combines search keywords using union, intersection, and exclusion operations."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Implemented an Album struct containing sets for artists and songs, with a map that associates each album title with its Album record.",
+          "Implemented music-library loading logic that reads album, artist, and song data from a text file.",
+          "Implemented export functionality that writes the current music library to a text file.",
+          "Implemented statistics logic that counts albums, unique artists, and songs.",
+          "Implemented case-insensitive partial-match searches for album titles, artist names, and song titles.",
+          "Implemented set-union, intersection, and difference operations to combine multi-keyword search results.",
+          "Integrated the project logic into the provided command-loop and helper-code structure."
+        ],
+
+        challenge: "The biggest challenge was implementing a search system that could find tracks quickly while supporting multiple search types and keyword combinations. The solution required organizing results with sets and using union, intersection, and difference operations to combine searches without producing duplicate album results.",
+
+        lessons: [
+          "Strengthened understanding of C++ maps for associating album titles with related music-library data.",
+          "Learned how sets can prevent duplicate artists, songs, and search results.",
+          "Gained experience implementing file import and export workflows for a console application.",
+          "Practiced building search logic that supports partial matching across multiple types of data.",
+          "Learned how set operations can combine search results for more flexible queries."
+        ],
+
+        improvements: [
+          "Trim leading and trailing spaces from user input so commands and searches are less sensitive to extra whitespace.",
+          "Use more direct lookup or indexing strategies for faster searching in larger music libraries.",
+          "Add support for editing or deleting individual albums, artists, and songs.",
+          "Add sorting and filtering options, such as filtering music by artist or album."
+        ]
       },
       {
         name: "Matrix Implementation",
         badges: ["🟢 Finished", "C++"],
         text: "Designed a reusable C++ Matrix class supporting mathematical operations and object-oriented programming concepts such as operator overloading.",
-        page_url: "",
-        is_featured: false
+        slug: "matrix-implementation",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Data Structures",
+          tagline: "A templated C++ matrix implementation with dynamic storage, safe element access, resizing, and multiplication operations.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Developed an individual C++ matrix class using dynamically allocated arrays. The implementation supports configurable matrix sizes, jagged rows, dynamic growth, bounds-checked element access, scalar multiplication, and matrix multiplication. A separate console-based test program validates the matrix behavior.",
+          role: "Developer (individual project; starter code provided)",
+          timeline: "February 2023",
+          status: "Completed",
+          technologies: %w[C++ Templates Dynamic_Memory],
+          platform: "Console application"
+        },
+
+        features: [
+          "Creates default 4-by-4 matrices or matrices with user-specified row and column counts.",
+          "Supports templated matrix elements, allowing the class to work with different data types.",
+          "Supports jagged rows, where rows can contain different numbers of columns.",
+          "Grows individual rows or the full matrix while preserving existing values.",
+          "Provides bounds-checked element access through at() and overloaded parentheses operators.",
+          "Supports scalar multiplication without changing the original matrix.",
+          "Performs matrix multiplication after validating rectangular shapes and compatible dimensions.",
+          "Runs 13 test cases covering construction, growth, access, scalar multiplication, and matrix multiplication."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Implemented the code inside the matrix-class methods using dynamically allocated arrays of row structures.",
+          "Implemented parameterized and copy constructors to create and duplicate matrix data.",
+          "Implemented growcols() and grow() to expand row and matrix dimensions while retaining existing elements.",
+          "Implemented size(), numrows(), numcols(), at(), and the overloaded parentheses operator for matrix inspection and access.",
+          "Added invalid-index and invalid-dimension checks that throw exceptions before an out-of-range access occurs.",
+          "Implemented scalar multiplication by creating and returning a multiplied matrix.",
+          "Implemented matrix multiplication with rectangular-matrix and dimension-compatibility validation.",
+          "Created 13 test cases to validate constructors, resizing behavior, element access, scalar multiplication, and matrix multiplication."
+        ],
+
+        challenge: "The biggest challenge was creating thorough test cases while ensuring the dynamic-memory implementation did not cause buffer overflows or allow indexes to go out of range. This required checking matrix dimensions carefully, validating row and column indexes before element access, and testing both normal and resizing behavior.",
+
+        lessons: [
+          "Strengthened understanding of dynamic memory allocation and two-dimensional data structures in C++.",
+          "Learned how to represent a matrix as dynamically allocated rows and columns.",
+          "Gained experience using templates to create a reusable matrix class.",
+          "Practiced validating dimensions and indexes to prevent out-of-range memory access.",
+          "Improved testing skills by creating cases for constructors, growth, element access, and matrix operations."
+        ],
+
+        improvements: [
+          "Add matrix addition and subtraction operations.",
+          "Expand the test suite with invalid-input and exception-handling cases.",
+          "Add a destructor and assignment operator to strengthen memory management for copied and assigned matrices.",
+          "Add additional operations such as transpose, determinant calculation, or matrix comparison."
+        ]
       },
       {
         name: "Shape-List Program",
         badges: ["🟢 Finished", "C++"],
         text: "Designed a shape management system that tracks object positions and rendering layers.",
-        page_url: "",
-        is_featured: false
+        slug: "shape-list-program",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Data Structures",
+          tagline: "A C++ shape-layer implementation that uses object-oriented design and a custom linked list to manage drawable shapes.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Developed an individual C++ data-structure implementation for organizing shapes in front-to-back drawing layers. The project uses inheritance and polymorphism to represent shapes with different properties, while a custom singly linked list stores, copies, inserts, removes, finds, and outputs shapes through console-based testing.",
+          role: "Developer (individual project; starter code and main program provided)",
+          timeline: "March 2023",
+          status: "Completed",
+          technologies: %w[C++ OOP Polymorphism Linked_Lists Dynamic_Memory Catch],
+          platform: "Console output and automated testing"
+        },
+
+        features: [
+          "Represents base shapes, circles, rectangles, and right triangles with their own position and dimension data.",
+          "Uses inheritance and virtual methods to support shape-specific copying and console output.",
+          "Stores shape pointers in a custom singly linked list representing front-to-back canvas layers.",
+          "Supports adding shapes to the front, back, or after a selected list position.",
+          "Supports removing shapes from selected positions, the front, or the back of the list.",
+          "Finds shapes by x and y coordinates and retrieves shapes by list index.",
+          "Creates deep copies of shape lists through copy constructors and assignment logic.",
+          "Tests the shape hierarchy and linked-list behavior with Catch-based test cases."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Implemented methods for the Shape, Circle, Rectangle, and RightTriangle classes.",
+          "Used inheritance to share x and y coordinate behavior while allowing each derived shape to store its own dimensions.",
+          "Implemented virtual copy() and printShape() methods so shape pointers can be copied and output polymorphically.",
+          "Implemented a custom ShapeNode structure and CanvasList class to manage shape pointers in a singly linked list.",
+          "Implemented list insertion, removal, lookup, access, and front/back operations.",
+          "Implemented copy-constructor and assignment behavior that clones shapes rather than sharing the same shape pointers.",
+          "Implemented destructor and clear() logic to remove list nodes and release dynamically allocated shapes.",
+          "Created Catch test cases for shape constructors, getters, setters, copying, list operations, and memory-related list behavior."
+        ],
+
+        challenge: "The biggest challenge was implementing the copy constructor and destructor without deleting unnecessary memory or leaving shared pointers between copied lists. Creating thorough test cases was also challenging because the project required validating multiple shape classes as well as linked-list insertion, removal, copying, and cleanup behavior.",
+
+        lessons: [
+          "Strengthened understanding of object-oriented programming through inheritance, virtual methods, and polymorphism.",
+          "Gained experience implementing a singly linked list with dynamically allocated nodes.",
+          "Learned how deep copying prevents separate linked lists from sharing ownership of the same dynamically allocated shapes.",
+          "Improved understanding of destructors, manual memory management, and ownership in C++.",
+          "Practiced designing automated tests for multiple classes and linked-list edge cases."
+        ],
+
+        improvements: [
+          "Build a GUI that visually displays and manages the shape layers.",
+          "Allow users to create, move, resize, and delete shapes interactively.",
+          "Add more shape types and visual properties such as colors, outlines, and fill styles.",
+          "Add save and load functionality for canvas-layer data."
+        ]
       },
       {
         name: "Priority Queue Program",
         badges: ["🟢 Finished", "C++"],
         text: "Implemented a priority queue using a self-balancing search tree to efficiently manage and retrieve patient records based on priority.",
-        page_url: "",
-        is_featured: false
+        slug: "priority-queue-program",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Data Structures",
+          tagline: "A templated C++ priority queue that orders entries by numeric priority using a binary search tree and duplicate-priority links.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Developed an individual C++ priority-queue implementation for a course scenario that prioritized hospital patients by numeric urgency. The reusable implementation stores generic values in a binary search tree, preserves entries with duplicate priorities through linked nodes, and supports ordered retrieval, traversal, copying, and testing.",
+          role: "Developer (individual project; starter code and testing framework provided)",
+          timeline: "March 2023 - April 2023",
+          status: "Completed",
+          technologies: %w[C++ Templates Binary_Search_Trees Linked_Lists Dynamic_Memory Catch],
+          platform: "Console output and automated testing"
+        },
+
+        features: [
+          "Enqueues generic values into a binary search tree according to numeric priority.",
+          "Retrieves and removes the lowest-priority entry through dequeue().",
+          "Views the next entry without removing it through peek().",
+          "Stores duplicate-priority entries in linked nodes while preserving insertion order.",
+          "Traverses priority-queue entries in priority order through begin() and next().",
+          "Clears dynamically allocated queue nodes and supports assignment-based copying.",
+          "Outputs entries in sorted priority order through toString().",
+          "Tests queue behavior with string, float, and character values."
+        ],
+
+        images: [],
+
+        tech_details: [
+          "Implemented a templated priorityqueue class backed by dynamically allocated binary-search-tree nodes.",
+          "Implemented enqueue() to place values by priority and connect duplicate-priority entries through link pointers.",
+          "Implemented dequeue() to find the lowest-priority node, reconnect child, parent, and duplicate-priority links, and remove the node safely.",
+          "Implemented peek(), Size(), clear(), destructor, assignment, equality, and string-output operations.",
+          "Implemented begin() and next() to traverse the queue in priority order.",
+          "Created Catch test cases for construction, insertion, duplicate priorities, clearing, assignment, traversal, dequeueing, peeking, equality, and multiple value types."
+        ],
+
+        challenge: "The biggest challenge was correctly reconnecting the binary-search-tree and duplicate-priority links when removing a node. Dequeueing the lowest-priority entry required carefully handling its parent, right child, and any linked entries with the same priority, while avoiding broken links or unnecessary memory deletion.",
+
+        lessons: [
+          "Strengthened understanding of binary search trees and priority-queue behavior.",
+          "Gained experience representing duplicate keys through linked nodes attached to tree nodes.",
+          "Improved dynamic-memory management skills through node creation, deletion, clearing, and assignment.",
+          "Learned how tree traversal can produce values in priority order.",
+          "Practiced writing automated tests for tree-based structures, duplicate priorities, and multiple template types."
+        ],
+
+        improvements: [
+          "Implement self-balancing behavior, such as tree rotations, to prevent the binary search tree from becoming unbalanced.",
+          "Add a GUI that visually shows queued patients, priorities, and dequeue operations.",
+          "Create a patient-specific interface with names, conditions, and priority categories.",
+          "Add performance tests that compare queue behavior as the number of entries grows."
+        ]
       },
       {
         name: "UIC Map Program",
         badges: ["🟢 Finished", "C++"],
         text: "Developed a campus navigation system using graph algorithms to calculate optimal routes between UIC buildings.",
-        page_url: "",
-        is_featured: false
+        slug: "uic-map-program",
+        is_featured: false,
+
+        hero_info: {
+          project_type: "Data Structures",
+          tagline: "A C++ UIC map program that loads OpenStreetMap data, builds a weighted footway graph, and prepares navigation inputs between campus buildings.",
+          github_link: "",
+          demo_link: ""
+        },
+
+        overview_info: {
+          overview: "Developed an individual C++ program that loads UIC OpenStreetMap data, models walkable footways as a weighted graph, and accepts two building selections. The completed scope builds graph vertices and bidirectional walking-path edges, identifies a midpoint destination, and finds nearby footway nodes. The Dijkstra routing portion was started but remained incomplete after assignment requirements were reduced because of limited project time.",
+          role: "Developer (individual project; starter code and supporting map libraries provided)",
+          timeline: "April 2023",
+          status: "Completed",
+          technologies: %w[C++ Graphs std::map std::vector Priority_Queue TinyXML2 OpenStreetMap],
+          platform: "Console application"
+        },
+
+        features: [
+          "Loads UIC map data, including geographic nodes, footways, and building information, from an OpenStreetMap XML file.",
+          "Builds a weighted graph whose vertices represent footway nodes and whose edges represent bidirectional walkable path segments.",
+          "Calculates edge weights from geographic distances between connected map nodes.",
+          "Searches the available building data by full building name or abbreviation.",
+          "Calculates the geographic midpoint between two selected buildings.",
+          "Finds the campus building nearest to the midpoint as a potential meeting destination.",
+          "Finds the footway nodes nearest to the selected buildings and midpoint destination.",
+          "Begins the setup for Dijkstra-based shortest-path routing using a priority queue and distance map."
+        ],
+
+        images: [
+          {
+            src: "",
+            alt: ""
+          }
+        ],
+
+        tech_details: [
+          "Implemented code inside the application functions and milestone sections of the provided project structure.",
+          "Built graph vertices from OpenStreetMap node IDs and added bidirectional weighted edges for consecutive nodes on each footway.",
+          "Calculated walking-edge distances with geographic coordinate data.",
+          "Implemented building lookup logic using full names and abbreviations.",
+          "Implemented midpoint and nearest-building calculations to identify a shared destination between two building selections.",
+          "Implemented a nearest-footway-node search by comparing geographic distances across footway nodes.",
+          "Started a Dijkstra-algorithm implementation with a priority queue and distance tracking map, but the relaxation and route-reconstruction logic was not completed in the reduced assignment scope."
+        ],
+
+        challenge: "The biggest challenge was implementing Dijkstra's algorithm. The routing feature required coordinating the weighted graph, priority queue, distance tracking, and route reconstruction. Because the project requirements were reduced due to limited time, the Dijkstra implementation remained incomplete, which made it difficult to validate a full route from one building to another.",
+
+        lessons: [
+          "Gained experience working with graph-based representations of real geographic data.",
+          "Learned how OpenStreetMap nodes and footways can be converted into weighted graph vertices and edges.",
+          "Improved understanding of geographic-distance calculations and how they support navigation features.",
+          "Developed familiarity with the setup required for Dijkstra's shortest-path algorithm, including priority queues and distance maps.",
+          "Learned how larger algorithms depend on completing each stage of graph construction, relaxation, and path reconstruction."
+        ],
+
+        improvements: [
+          "Complete Dijkstra's algorithm by implementing edge relaxation, priority-queue updates, predecessor tracking, and route reconstruction.",
+          "Display the final walking route, total distance, and step-by-step directions between selected buildings.",
+          "Support alternative nearby meeting destinations when the midpoint building is unavailable or inconvenient.",
+          "Improve building search to support true partial-name matching and case-insensitive input.",
+          "Add a graphical map interface that visualizes buildings, footways, selected routes, and meeting destinations."
+        ]
       },
     ]
   },

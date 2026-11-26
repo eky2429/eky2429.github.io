@@ -113,14 +113,23 @@
   </section>
 
   <!-- 4 MEDIA -->
-  <section class="project-section">
-    <h2>Screenshots</h2>
-    <%#if project_data[:images].length <=4 %>
-      <%#= partial :'partials/_media_grid', images: project_data[:images] %>
-    <%#else %>
-      <%= partial :'partials/_media_carosel', images: project_data[:images] %>
-    <%# end %>
-  </section>
+  <% unless project_data[:images].empty? %>
+    <!-- Screenshots section -->
+    <% image_count = project_data[:images].length %>
+    <section class="project-section">
+      <h2>Screenshots</h2>
+      <% if image_count == 1 %>
+        <%= partial :'partials/_media_single',
+                    images: project_data[:images] %>
+      <% elsif image_count <= 4 %>
+        <%= partial :'partials/_media_grid',
+                    images: project_data[:images] %>
+      <% else %>
+        <%= partial :'partials/_media_carosel',
+                    images: project_data[:images] %>
+      <% end %>
+    </section>
+  <% end %>
 
   <!-- 5. TECHNICAL HIGHLIGHTS -->
   <section class="project-section">
